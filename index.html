@@ -627,9 +627,14 @@ body.splash-on{overflow:hidden}
   .card-b{padding:14px}
   .card-h{padding:14px}
   .banner{padding:14px}
-  /* 新增模块的移动端适配 */
-  .pi-in{max-width:none;flex:1 1 100%}
-  .pi-in.num,.pi-in.sel{max-width:100%;flex:1 1 auto}
+  /* 今日清单条目：标题独占第一行，数值/下拉/备注排到第二行，避免标题被挤成竖排 */
+  .plan-item{flex-wrap:wrap;row-gap:7px}
+  .pi-main{flex:1 1 130px;min-width:130px}
+  .pi-t{word-break:break-word;line-height:1.45}
+  .pi-in{flex:1 1 auto;min-width:96px;max-width:none}
+  .pi-in.num{flex:0 0 84px;max-width:84px}
+  .pi-in.sel{flex:0 0 118px;max-width:118px}
+  .pi-unit{flex:0 0 auto}
   .goal-stats{grid-template-columns:repeat(2,1fr)}
   .plan-tabs{padding:12px 12px 0}
   .ptab{padding:7px 13px;font-size:12.5px}
