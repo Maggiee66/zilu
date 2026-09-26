@@ -494,6 +494,7 @@ body.splash-on{overflow:hidden}
   padding:12px 16px;margin:8px 0 12px;line-height:1.7;
 }
 .sp-mini{display:flex;gap:16px;justify-content:center;font-size:12px;color:var(--muted);margin-bottom:18px;flex-wrap:wrap}
+.sp-by{font-size:12px;color:var(--accent-deep);background:#fff;border:1.5px dashed var(--accent);border-radius:999px;padding:7px 14px;margin:-6px auto 14px;width:fit-content;max-width:100%}
 .sp-btn{
   width:100%;padding:14px;border:none;border-radius:999px;color:#fff;font-size:16px;font-weight:800;cursor:pointer;
   background:linear-gradient(145deg,#f794b4,#ef7fa2);box-shadow:0 8px 22px rgba(239,127,162,.36);
@@ -603,6 +604,43 @@ body.splash-on{overflow:hidden}
 .wi-t{font-size:13px;word-break:break-word}
 .wi-c{font-size:11px;color:var(--muted)}
 
+/* ---------- 金币：统一金黄 ---------- */
+.cb-n{color:#e0952f}
+.coin-plus,.cr-a{color:#e0952f}
+#btnCoins{background:linear-gradient(180deg,#fffdf4,#fff6e0);border-color:#f2d69b}
+#btnCoins:hover{background:#fff2d5}
+#coinNum{color:#bd7f0a;font-weight:800}
+.gift-row .btn.primary{background:linear-gradient(135deg,#ffd98a,#f4b23c);border-color:#f0c164;color:#6b4300}
+
+/* 今日目标胶囊 */
+.goal-chip{font-size:11.5px;padding:3px 10px;border-radius:999px;background:#fff;border:1.5px solid var(--line-2);color:var(--muted);white-space:nowrap;flex:0 0 auto}
+.goal-chip.on{background:#fff6df;border-color:#f2d69b;color:#a97408;font-weight:700}
+
+/* ---------- 双语好句：语音朗读 / 跟读 ---------- */
+.speak-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:9px 0 3px}
+.sp-hint{font-size:11px;color:var(--muted)}
+.hint.warn{color:#c9762f}
+
+/* ---------- 早晚体重 & 代谢 ---------- */
+.w-inputs{display:flex;gap:10px;flex-wrap:wrap}
+.w-box{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;background:#fff;border:1.5px solid var(--line-2)}
+.w-box label{font-size:12px;color:var(--ink-2);white-space:nowrap}
+.w-in{width:90px;border:1.5px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;text-align:center;background:#fff}
+.w-result{display:flex;align-items:center;gap:14px;margin:10px 0;padding:10px 14px;border-radius:18px;background:#fff;border:1.5px solid var(--line-2)}
+.w-diff-big{font-size:30px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;min-width:78px}
+.w-diff-big small{font-size:12px;margin-left:2px;color:var(--muted);font-weight:600}
+.w-meta{display:flex;flex-direction:column;gap:2px;font-size:12px;min-width:0}
+.w-stats{margin-bottom:6px}
+.w-diff{font-weight:700;font-size:11.5px}
+@media(max-width:639px){
+  .w-inputs{flex-direction:column}
+  .w-box{width:100%}
+  .w-in{width:96px}
+  .speak-bar .btn{flex:1 1 auto}
+  .w-result{gap:10px}
+  .w-diff-big{font-size:26px;min-width:66px}
+}
+
 /* ---------- 打磨：入场动效 / 勾选弹跳 / 触感 ---------- */
 @media (prefers-reduced-motion: no-preference){
   @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
@@ -645,6 +683,103 @@ body.splash-on{overflow:hidden}
 @supports(padding:max(0px)){
   .sidebar{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
 }
+
+/* ============================================================
+ * 导游备考：章节闯关（业务/法规/全导/地导）+ 面试导游词
+ * ============================================================ */
+.grow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.gpill{padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-deep);font-size:12px;font-weight:600}
+.gpill.gray{background:var(--line-2);color:var(--muted)}
+.gpill.green{background:var(--green-soft);color:#4f8f70}
+.gpill.amber{background:var(--amber-soft);color:#b57b34}
+.gpill.red{background:var(--red-soft);color:#b86a6a}
+.gtoday{display:flex;gap:14px;align-items:flex-start;background:var(--bg-2);border:1.5px dashed var(--accent);border-radius:var(--radius-s);padding:14px 16px;margin-bottom:12px}
+.gtoday .gt-ico{font-size:26px;line-height:1.2}
+.gtoday .gt-b{min-width:0;flex:1}
+.gtg{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.gbook{margin-bottom:16px}
+.gbook:last-child{margin-bottom:0}
+.gbook-h{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.gbook-h .gb-n{font-weight:700;font-size:14px}
+.gchips{display:flex;flex-wrap:wrap;gap:7px}
+.gchip{min-width:40px;height:40px;padding:0 8px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;transition:.15s}
+.gchip small{font-size:9.5px;font-weight:500;opacity:.8;letter-spacing:0}
+.gchip.st1{background:var(--accent-soft);border-color:#f9b9cc;color:var(--accent-deep)}
+.gchip.st2{background:linear-gradient(145deg,#f794b4,#ef7fa2);border-color:#ef7fa2;color:#fff}
+.gchip.cur{box-shadow:0 0 0 3px rgba(239,127,162,.3)}
+.gspeeches{display:flex;flex-wrap:wrap;gap:8px}
+.gsp{padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-2);font-size:13px;cursor:pointer;transition:.15s;text-align:left;line-height:1.4}
+.gsp b{display:block;font-size:12.5px;font-weight:700}
+.gsp small{font-size:10.5px;color:var(--muted)}
+.gsp.st1{background:var(--accent-soft);border-color:#f9b9cc}
+.gsp.st2{background:linear-gradient(145deg,#f794b4,#ef7fa2);border-color:#ef7fa2;color:#fff}
+.gsp.st2 small{color:#fff;opacity:.9}
+.gsp.cur{box-shadow:0 0 0 3px rgba(239,127,162,.3)}
+.glegend{display:flex;gap:14px;font-size:11.5px;color:var(--muted);margin-top:10px;flex-wrap:wrap}
+.glegend i{display:inline-block;width:11px;height:11px;border-radius:4px;margin-right:5px;vertical-align:-1px;border:1.5px solid var(--line)}
+.gtl{display:flex;flex-direction:column;gap:8px}
+.gtl-row{display:flex;align-items:center;gap:10px;background:var(--bg-2);border-radius:var(--radius-s);padding:10px 14px;flex-wrap:wrap}
+.gtl-row .gtl-n{font-weight:700;min-width:80px}
+.gtl-row .gtl-d{font-size:12.5px;color:var(--ink-2)}
+@media (max-width:819px){
+  .gchip{min-width:36px;height:38px;font-size:12px}
+  .gtoday{padding:12px}
+  .gtl-row .gtl-n{min-width:64px}
+}
+
+/* ============================================================
+ * 每日复盘：学习足迹表 / 缺口扫描
+ * ============================================================ */
+.foot{display:flex;flex-direction:column;gap:6px}
+.frow{display:flex;align-items:center;gap:10px;background:var(--bg-2);border-radius:var(--radius-s);padding:9px 12px;cursor:pointer;transition:.15s;flex-wrap:wrap}
+.frow:hover{background:var(--accent-soft)}
+.frow.empty{background:#fff;border:1.5px dashed var(--line)}
+.frow.today{box-shadow:0 0 0 2px rgba(239,127,162,.35)}
+.fr-d{width:64px;flex:0 0 64px;line-height:1.25}
+.fr-d b{display:block;font-size:12.5px}
+.fr-d small{font-size:10.5px;color:var(--muted)}
+.fr-dots{display:flex;gap:5px;flex:1 1 150px;min-width:0;flex-wrap:wrap}
+.fdot{width:26px;height:26px;border-radius:10px;border:1.5px dashed var(--line);background:#fff;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:13px;opacity:.42;filter:grayscale(1);transition:.15s}
+.fdot.on{border:1.5px solid #f9b9cc;background:linear-gradient(145deg,#ffd9e4,#ffc5d6);opacity:1;filter:none;box-shadow:0 2px 6px rgba(239,127,162,.22)}
+.fr-r{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.fr-bar{width:74px;height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.fr-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f9b9cc,#ef7fa2)}
+.fr-n{font-size:11.5px;color:var(--muted);min-width:42px;text-align:right}
+.frow.empty .fr-n{color:var(--red)}
+.fr-tag{width:100%;display:flex;gap:6px;flex-wrap:wrap}
+.ftag{font-size:10.5px;padding:2px 9px;border-radius:999px;background:var(--blue-soft);color:var(--blue-deep)}
+.ftag.amber{background:var(--amber-soft);color:#b57b34}
+.gap-sec{margin-bottom:14px}
+.gap-sec:last-child{margin-bottom:0}
+.gap-h{font-weight:700;font-size:13px;margin-bottom:8px}
+.gap-list{display:flex;flex-wrap:wrap;gap:7px}
+.trail{display:flex;flex-direction:column;gap:6px}
+.trail-row{display:flex;align-items:center;gap:10px;background:var(--bg-2);border-radius:var(--radius-s);padding:8px 12px;flex-wrap:wrap}
+.trail-row .tr-d{font-size:11.5px;color:var(--muted);min-width:52px}
+.trail-row .tr-t{font-size:13px}
+@media (max-width:819px){
+  .fr-d{width:56px;flex:0 0 56px}
+  .fdot{width:24px;height:24px;font-size:12px}
+  .fr-bar{width:56px}
+}
+
+/* ============================================================
+ * 复盘：小自律的建议 & 早晚体重夜间代谢
+ * ============================================================ */
+.adv{display:flex;flex-direction:column;gap:8px}
+.adv-row{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-radius:var(--radius-s);background:var(--bg-2);line-height:1.6}
+.adv-row .adv-ico{font-size:16px;line-height:1.4}
+.adv-row .adv-t{font-size:13px;min-width:0;flex:1}
+.adv-row.ok{background:var(--green-soft)}
+.adv-row.warn{background:var(--amber-soft)}
+.adv-row.cheer{background:var(--accent-soft);font-weight:600}
+.wb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.wb-cell{background:var(--bg-2);border-radius:var(--radius-s);padding:10px 14px}
+.wb-cell .wb-k{font-size:11px;color:var(--muted)}
+.wb-cell .wb-v{font-size:17px;font-weight:800;line-height:1.35}
+.wb-cell .wb-x{font-size:11px;color:var(--muted)}
+@media (min-width:640px){.wb-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:819px){.wb-cell{padding:9px 11px}.wb-cell .wb-v{font-size:15px}}
 
 </style>
 </head>
@@ -726,6 +861,10 @@ WB.DEFAULT_TASKS = [
   { id: 'fit-baduanjin', section: 'fitness', title: '八段锦跟练', type: 'number', unit: '分钟', target: 15, fixed: true, repeat: 'daily', noteHint: '身体感受 / 出汗情况' },
   { id: 'fit-glute',     section: 'fitness', title: '臀腿训练', type: 'select', options: ['已完成', '部分完成', '休息日'], fixed: true, repeat: 'daily', noteHint: '发力状态（臀主导 / 腿代偿 / 核心没收紧）' },
   { id: 'fit-arch',      section: 'fitness', title: '足弓训练（体态矫正）', type: 'number', unit: '分钟', target: 10, fixed: true, repeat: 'daily', noteHint: '动作 / 组数' },
+  /* 早晚体重：用于推算代谢与水肿情况（同一台秤、晨起空腹 / 睡前各一次最准）
+     weightRole 让它们只在「体重 & 代谢」卡片里出现，不重复进通用任务列表 */
+  { id: 'fit-weight-am', section: 'fitness', title: '晨起体重', type: 'number', unit: 'kg', target: 0, fixed: true, repeat: 'daily', weightRole: 'am', noteHint: '起床排尿后、空腹、同一台秤' },
+  { id: 'fit-weight-pm', section: 'fitness', title: '睡前体重', type: 'number', unit: 'kg', target: 0, fixed: true, repeat: 'daily', weightRole: 'pm', noteHint: '睡前同一台秤' },
 
   /* 英语学习 */
   { id: 'eng-nce',   section: 'english', title: 'B站胶学 · 新概念英语第一册跟学', type: 'number', unit: '分钟', target: 30, fixed: true, repeat: 'daily', noteHint: 'Lesson No. / 今日句型' },
@@ -749,13 +888,19 @@ WB.MOTTO = {
   guide: '11 月 21 日考场见。今天刷的每一道题，都是考场上的一分底气。'
 };
 
+/* ---------- 主人 & 小自律 的名字 ----------
+ * 想改称呼，只需改这里两行，全站（启动页、问候语、夸赞句）都会跟着变。 */
+WB.USER_NAME = '财财';
+WB.AI_NAME = '小自律';
+WB.DEFAULT_GREETING = '嗨，财财';   // 启动页默认问候语，可在启动页点 ✏️ 自定义修改
+
 /* ---------- 启动页：问候语 & 每日夸赞金句 ----------
- * 问候语默认「嗨，老板大人」，可在启动页点 ✏️ 自定义修改。
+ * 问候语默认「嗨，财财」，可在启动页点 ✏️ 自定义修改。
  * 金句每次打开（或点「换个夸法」）随机抽一条。 */
 WB.PRAISES = [
   '今天的你，比昨天又厉害了一点点 ✨',
   '慢慢来，你已经在路上了 🌸',
-  '老板大人今天也闪闪发光呀 💗',
+  '财财今天也闪闪发光呀 💗',
   '自律的人最自由，你已经赢过很多人了 🎀',
   '不用完美，完成就很了不起啦 🍬',
   '身体在变好，脑子在变聪明，一切都值得 🌷',
@@ -776,19 +921,24 @@ WB.PRAISES = [
   '打败拖延的方法只有一个：先做 5 分钟 🚀',
   '你不需要很厉害才开始，你要开始了才会很厉害 🌈',
   '不焦虑昨天，不内耗明天，今天就够了 🫧',
-  '每一天的重复，都是在给未来的自己攒底气 🎁'
+  '每一天的重复，都是在给未来的自己攒底气 🎁',
+  '小自律在这儿盯着你呢，快去勾掉第一项 🎀',
+  '小自律帮你记着：你从没真正放弃过 🌷',
+  '财财的每一次坚持，小自律都偷偷记在账上啦 📒',
+  '不用跟别人比，财财只要赢过昨天的自己 🦋'
 ];
 
-/* ---------- 今日清单的抽取来源 ----------
- * 已改为「抽取用户自己的任务」：各板块内置必做项 + 你在任何板块手动新增的自定义任务。
- * 抽取逻辑见 store.js 的 WB.planPool / WB.dailyPlans（总数不足 6 条则全部展示，超过则必做项优先 + 换一批重抽）。
- * 想调整每天抽几条：改 store.js 里 dailyPlans 中的 6；想让某板块任务不进清单：给任务加 archived 属性。 */
+/* ---------- 今日清单 ----------
+ * 展示当天全部打卡事项（各板块内置必做项 + 你手动新增的自定义任务）。
+ * 每日达标线：打满 DAILY_GOAL 项即可领全勤金币，多做不限。
+ * 想改达标线改下面的数字；想让某任务不进清单：给它加 archived 属性。 */
+WB.DAILY_GOAL = 6;
 
 /* ---------- 游戏化激励：金币规则（每日上限 10 枚） ----------
  * manual = true 的规则需要手动点「领取」；其余达成后自动到账。
  * test 在 store.js 中用本机的真实打卡数据判定。 */
 WB.COIN_RULES = [
-  { id: 'today-all', name: '今日清单全部完成', amount: 5, icon: '🧺', desc: '今日清单里的任务全部勾完才能领', manual: true },
+  { id: 'today-all', name: '今日打卡满 6 项', amount: 5, icon: '🪙', desc: '当天任意完成 6 项打卡即可领取', manual: true },
   { id: 'fitness',   name: '运动打卡',         amount: 2, icon: '🏃‍♀️', desc: '强身健体当天完成任意一项', manual: false },
   { id: 'video',     name: '视频跟练',         amount: 1, icon: '🎬', desc: '八段锦 / 臀腿跟练有记录', manual: false },
   { id: 'english',   name: '英文学习',         amount: 2, icon: '🔤', desc: '英语学习当天完成任意一项', manual: false }
@@ -1104,6 +1254,67 @@ WB.BODY_FIELDS = [
   { k: 'note',     t: '身体变化备注', type: 'textarea', ph: '臀围、体态、排便、手脚冰凉等任何变化' }
 ];
 
+/* ============================================================
+ * 导游备考：四本教材章节 + 面试导游词（12 篇）
+ * 章名 / 篇名都是「参考默认」，在页面上点 ✏️ 就能改成你教材上的真实目录。
+ * 学习顺序固定：业务 → 法规 → 全导 → 地导（一天一章），面试导游词同步穿插。
+ * ============================================================ */
+WB.GUIDE_BOOKS = [
+  {
+    id: 'biz', name: '导游业务', short: '业务', icon: '🗣️',
+    titles: ['导游服务概述', '导游人员', '导游服务程序与规范', '团队旅游接待实务',
+      '散客与特殊旅游接待', '游客个别要求的处理', '旅游故障与突发事件处理',
+      '导游带团与讲解技能', '导游语言 · 礼仪 · 心理', '旅游安全与相关知识']
+  },
+  {
+    id: 'law', name: '政策与法律法规', short: '法规', icon: '⚖️',
+    titles: ['宪法与基本国策', '旅游法', '旅行社管理法律制度', '导游人员管理法律制度',
+      '旅游安全管理法律制度', '出入境管理法律制度', '交通与住宿管理法律制度',
+      '食品与娱乐场所管理法律制度', '旅游资源保护法律制度', '消费者权益保护法律制度',
+      '合同法律制度', '侵权责任法律制度', '公司企业法律制度',
+      '旅游纠纷处理与旅游投诉', '时事政治与旅游方针政策']
+  },
+  {
+    id: 'nat', name: '全国导游基础知识', short: '全导', icon: '🏯',
+    titles: ['旅游业发展概况', '中国历史文化', '中国旅游地理', '中国民族民俗',
+      '中国宗教文化', '中国古代建筑', '中国古典园林', '中国饮食文化',
+      '中国风物特产', '中国旅游文学与艺术', '中国香港 / 中国澳门 / 中国台湾地区概况',
+      '世界旅游与主要客源国概况']
+  },
+  {
+    id: 'loc', name: '地方导游基础知识', short: '地导', icon: '🗺️',
+    titles: ['华北地区（京津冀晋内蒙古）', '东北地区（辽吉黑）', '华东地区（沪苏浙皖闽赣鲁）',
+      '华中地区（豫鄂湘）★ 河南重点', '华南地区（粤桂琼）', '西南地区（川渝贵云藏）',
+      '西北地区（陕甘青宁新）', '中国港澳台地区概况']
+  }
+];
+
+/* 面试：河南 12 个地区导游词（可 ✏️ 改成你考区指定的篇目） */
+WB.GUIDE_SPEECHES = [
+  { id: 'sp01', name: '少林寺', city: '郑州 · 登封' },
+  { id: 'sp02', name: '黄帝故里', city: '郑州 · 新郑' },
+  { id: 'sp03', name: '龙门石窟', city: '洛阳' },
+  { id: 'sp04', name: '白马寺', city: '洛阳' },
+  { id: 'sp05', name: '清明上河园', city: '开封' },
+  { id: 'sp06', name: '开封府 / 龙亭', city: '开封' },
+  { id: 'sp07', name: '殷墟', city: '安阳' },
+  { id: 'sp08', name: '红旗渠', city: '安阳 · 林州' },
+  { id: 'sp09', name: '云台山', city: '焦作' },
+  { id: 'sp10', name: '万仙山 / 郭亮村', city: '新乡 · 辉县' },
+  { id: 'sp11', name: '鸡公山', city: '信阳' },
+  { id: 'sp12', name: '内乡县衙', city: '南阳' }
+];
+
+/* 排程规则：一天一章；导游词每 SPEECH_EVERY 天攻克一篇（与四科同步进行） */
+WB.GUIDE_RULE = { chapterPerDay: 1, speechEvery: 4, reviewDays: 10 };
+
+/* 计划开始日：2026-09-27（之后可在页面上「📅 改开始日」随时调整） */
+WB.GUIDE_START = '2026-09-27';
+
+/* 章节 / 导游词状态文案 */
+WB.GSTATE = ['未学', '已学', '已巩固'];
+WB.SSTATE = ['未开始', '熟悉中', '可脱稿'];
+
 </script>
 <script>
 /* ============================================================
@@ -1157,7 +1368,7 @@ WB.BODY_FIELDS = [
       createdAt: new Date().toISOString(),
       settings: {
         examDate: '2026-11-21', guideDailyTarget: 200,
-        greeting: '嗨，老板大人',        // 启动页问候语，可自定义
+        greeting: (WB.DEFAULT_GREETING || '嗨，财财'),   // 启动页问候语，可自定义
         splashDate: '',                   // 上次弹出启动页的日期（每天只在首次打开时弹）
         splashOff: false,                 // true = 不再自动弹出启动页
         planSeed: {}                      // 每日计划「换一批」偏移量：{ 'YYYY-MM-DD': n }
@@ -1170,6 +1381,13 @@ WB.BODY_FIELDS = [
       wishes: [],       // 心愿清单：{id, title, cost, redeemed, redeemedAt, ts}
       goals: [],        // 长期目标：{id, title, progress(0-100), note, deadline, ts}
       weekPlans: [],    // 本周计划：{id, weekKey(周一日期), title, day(''|'周一'…), done, ts}
+      /* 导游备考闯关：四本教材章节 + 面试导游词进度 */
+      guideStudy: {
+        startDate: (WB.GUIDE_START || ''),   // 计划开始日：2026-09-27（可在页面上改）
+        chapters: {},    // { 'biz-1': { st:0未学|1已学|2已巩固, date:'', quiz:'', rate:'' } }
+        speeches: {},    // { 'sp01': { st:0未开始|1熟悉中|2可脱稿, date:'' } }
+        titles: {}       // 自定义章名 / 篇名：{ 'biz-1':'…', 'sp01':'…' }
+      },
       meta: { lastSection: 'today' }
     };
   }
@@ -1197,7 +1415,14 @@ WB.BODY_FIELDS = [
     if (!s.goals) s.goals = [];
     if (!s.weekPlans) s.weekPlans = [];
     if (!s.settings.planSeed) s.settings.planSeed = {};
-    if (!s.settings.greeting) s.settings.greeting = '嗨，老板大人';
+    if (!s.guideStudy) s.guideStudy = { startDate: '', chapters: {}, speeches: {}, titles: {} };
+    if (!s.guideStudy.chapters) s.guideStudy.chapters = {};
+    if (!s.guideStudy.speeches) s.guideStudy.speeches = {};
+    if (!s.guideStudy.titles) s.guideStudy.titles = {};
+    if (!s.guideStudy.startDate) s.guideStudy.startDate = WB.GUIDE_START || today();
+    /* 称呼升级：空值、或仍是旧默认「老板大人」的，统一改成新称呼 */
+    var DEF_G = WB.DEFAULT_GREETING || '嗨，财财';
+    if (!s.settings.greeting || s.settings.greeting === '嗨，老板大人') s.settings.greeting = DEF_G;
 
     // 内置任务模板补全（后续新增固定项会自动出现在各板块）
     var have = {};
@@ -1474,102 +1699,22 @@ WB.BODY_FIELDS = [
   };
 
   /* =========================================================
-   * 今日清单：按日期种子随机生成 6 条计划
-   * 同一天始终显示同一批（种子 = 日期天数 + 手动换一批的偏移量），
-   * 点「🎲 换一批」偏移量 +1，旧批次已勾的记录仍保留在存档里。
+   * 今日清单：展示当天全部打卡事项
+   * 全部任务都列出来（不再随机抽取），但每日目标仍是打满 DAILY_GOAL（默认 6）项
+   * 即可领取全勤金币 —— 想多做也欢迎，多做多得但金币上限不变。
    * ========================================================= */
-  function mulberry(seed) {
-    var s = seed >>> 0;
-    return function () {
-      s = (s + 0x6D2B79F5) >>> 0;
-      var t = s;
-      t = Math.imul(t ^ (t >>> 15), t | 1);
-      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
+  function taskDoneOn(date, t) {
+    var l = WB.getLog(date, t.id);
+    return !!(l && (l.done || (l.value !== '' && l.value != null)));
   }
 
-  WB.planSeedOf = function (date) {
-    return ((S.settings.planSeed && S.settings.planSeed[date]) || 0);
-  };
-
-  function shuffle(arr, rnd) {
-    for (var i = arr.length - 1; i > 0; i--) {
-      var j = Math.floor(rnd() * (i + 1));
-      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
-    }
-    return arr;
-  }
-
-  /* 按板块轮询取任务：让清单尽量覆盖不同板块，而不是某个板块堆一坨 */
-  function roundRobin(list, need, rnd) {
-    if (need <= 0 || !list.length) return [];
-    var groups = {}, order = [];
-    list.forEach(function (t) {
-      var s = t.section || 'other';
-      if (!groups[s]) { groups[s] = []; order.push(s); }
-      groups[s].push(t);
-    });
-    order.forEach(function (s) { shuffle(groups[s], rnd); });
-    var out = [], added = true;
-    while (out.length < need && added) {
-      added = false;
-      for (var i = 0; i < order.length && out.length < need; i++) {
-        if (groups[order[i]].length) { out.push(groups[order[i]].shift()); added = true; }
-      }
-    }
-    return out;
-  }
-
-  /* 今日清单抽取池 = 你自己设置的任务：
-   * 各板块内置必做项 + 你在任何板块手动新增的自定义任务（自动并入）。
-   * 排除今日临时计划（today）与已归档任务；「单次」任务只在当天出现。 */
-  WB.planPool = function (date) {
-    return (S.tasks || []).filter(function (t) {
-      if (t.archived) return false;
-      if (!t.section || t.section === 'today' || t.section === 'history') return false;
-      if (t.repeat === 'once') return t.date === date;
-      return true;
-    });
-  };
-
-  /* 今日清单：从你自己的任务里抽 6 条
-   * · 总任务不足 6 条 → 全部展示，不做随机
-   * · 必做项优先：必做池与自选池各自洗牌后交替取，凑满 6 条
-   * · 同一天多次渲染结果稳定（日期 + 种子决定），点「换一批」才重抽
-   * · done 判定与各板块一致（勾选 或 填了数值都算完成），两处实时联动 */
-  WB.dailyPlans = function (date) {
-    var pool = WB.planPool(date);
-    if (!pool.length) return [];
-
-    var picked = pool;
-    if (pool.length > 6) {
-      var off = WB.planSeedOf(date);
-      var rnd = mulberry(daysFromEpoch(date) * 31 + off * 977 + 20250917);
-      var must = [], rest = [];
-      pool.forEach(function (t) { (t.fixed || t.builtin ? must : rest).push(t); });
-
-      /* 自定义任务留 2 个名额，其余给必做项 */
-      var take = rest.length ? roundRobin(rest, Math.min(2, rest.length), rnd) : [];
-      take = take.concat(roundRobin(must, 6 - take.length, rnd));
-      if (take.length < 6) {
-        var used = {};
-        take.forEach(function (t) { used[t.id] = 1; });
-        take = take.concat(roundRobin(rest.concat(must).filter(function (t) { return !used[t.id]; }), 6 - take.length, rnd));
-      }
-      picked = take;
-      /* 同板块的相对顺序按原设置排列，读起来更顺 */
-      var order = {};
-      pool.forEach(function (t, i) { order[t.id] = i; });
-      picked.sort(function (a, b) { return order[a.id] - order[b.id]; });
-    }
-
-    return picked.map(function (t) {
+  /* 今日清单条目：把任务带上当天打卡状态，供清单与各板块共用判定 */
+  WB.planItems = function (date) {
+    return WB.allDailyTasks(date).map(function (t) {
       var l = WB.getLog(date, t.id) || {};
       var valued = (l.value !== '' && l.value != null);
       return {
-        id: t.id,                       // 直接用真实任务 id → 与板块打卡同一份数据
-        task: t,
+        id: t.id,
         title: t.title,
         secId: t.section,
         secName: WB.SEC_NAME[t.section] || '今日',
@@ -1585,16 +1730,217 @@ WB.BODY_FIELDS = [
     });
   };
 
-  WB.rerollPlans = function (date) {
-    S.settings.planSeed = S.settings.planSeed || {};
-    S.settings.planSeed[date] = WB.planSeedOf(date) + 1;
-    save();
+  /* 今日目标条数：打满即算全勤（任务总数不足时以总数为目标） */
+  WB.dailyGoal = function (date) {
+    return Math.min((WB.DAILY_GOAL || 6), WB.allDailyTasks(date).length);
   };
 
   WB.planStats = function (date) {
-    var ps = WB.dailyPlans(date);
-    var done = ps.filter(function (p) { return p.done; }).length;
-    return { total: ps.length, done: done, pct: ps.length ? Math.round(done / ps.length * 100) : 0, allDone: ps.length > 0 && done === ps.length };
+    var all = WB.allDailyTasks(date);
+    var doneAll = all.filter(function (t) { return taskDoneOn(date, t); }).length;
+    var goal = WB.dailyGoal(date);
+    var done = Math.min(doneAll, goal);
+    return {
+      total: goal,          // 每日达标线
+      listTotal: all.length, // 清单里一共列了多少项
+      done: done,
+      doneAll: doneAll,     // 实际完成数（可能超过达标线）
+      pct: goal ? Math.round(done / goal * 100) : 0,
+      allDone: goal > 0 && doneAll >= goal
+    };
+  };
+
+  /* =========================================================
+   * 体重 & 代谢（早晨 / 晚上各记一次，看早晚差与趋势）
+   * 数据来自内置任务 fit-weight-am / fit-weight-pm 的打卡数值。
+   * ========================================================= */
+  function numOf(date, id) {
+    var l = WB.getLog(date, id);
+    if (!l) return null;
+    var v = parseFloat(l.value);
+    return isNaN(v) ? null : v;
+  }
+
+  WB.weightOf = function (date) {
+    return { am: numOf(date, 'fit-weight-am'), pm: numOf(date, 'fit-weight-pm') };
+  };
+
+  /* 早晚差评估：反映水分滞留 / 水肿 / 代谢节奏 */
+  WB.diffLevel = function (diff) {
+    if (diff == null) return { key: 'none', label: '待记录', tip: '早晚各称一次，就能看出水分与代谢节奏。', color: '#b394a1' };
+    if (diff < 0) return { key: 'low', label: '晚间更轻', tip: '少见，多半是白天喝水进食少或测量误差，注意别过度节食。', color: '#8fb3d9' };
+    if (diff < 0.6) return { key: 'good', label: '代谢平稳', tip: '早晚差很小，水分代谢顺畅，身体状态不错 🩷', color: '#5aa06f' };
+    if (diff < 1.2) return { key: 'normal', label: '正常区间', tip: '一天吃喝带来的正常波动，无需担心。', color: '#5aa06f' };
+    if (diff < 2.0) return { key: 'high', label: '略偏高', tip: '可能吃偏咸、久坐水肿或经期前滞留。今天多走动、泡脚、早点睡。', color: '#e0952f' };
+    return { key: 'edema', label: '水肿偏重', tip: '明显滞留：控盐、少久坐、睡前泡脚抬腿，连续偏高要注意作息。', color: '#e0685f' };
+  };
+
+  WB.weightStats = function (date) {
+    var today = WB.weightOf(date);
+    var diff = (today.am != null && today.pm != null) ? Math.round((today.pm - today.am) * 100) / 100 : null;
+
+    var last7 = WB.date.lastNDates(7, date);
+    var prev7 = last7.map(function (d) { return WB.date.addDays(d, -7); });
+    function avg(dates, pick) {
+      var sum = 0, n = 0;
+      dates.forEach(function (d) {
+        var w = WB.weightOf(d);
+        var v = pick === 'pm' ? w.pm : w.am;
+        if (v != null) { sum += v; n++; }
+      });
+      return n ? sum / n : null;
+    }
+    var diffs = [], rows = [];
+    last7.forEach(function (d) {
+      var w = WB.weightOf(d);
+      if (w.am == null && w.pm == null) return;
+      var dd = (w.am != null && w.pm != null) ? Math.round((w.pm - w.am) * 100) / 100 : null;
+      if (dd != null) diffs.push(dd);
+      rows.push({ date: d, am: w.am, pm: w.pm, diff: dd });
+    });
+    var avgDiff = diffs.length ? Math.round(diffs.reduce(function (a, b) { return a + b; }, 0) / diffs.length * 100) / 100 : null;
+    var am7 = avg(last7, 'am'), amPrev = avg(prev7, 'am');
+    var trend = (am7 != null && amPrev != null) ? Math.round((am7 - amPrev) * 100) / 100 : null;
+
+    /* 基础代谢 BMR（Mifflin-St Jeor）：需要身高 / 年龄 / 性别 */
+    var st = WB.state.settings || {};
+    var bmr = null, tdee = null;
+    var ref = am7 != null ? am7 : (today.am != null ? today.am : null);
+    if (ref != null && st.height && st.age && st.gender) {
+      var base = 10 * ref + 6.25 * (+st.height) - 5 * (+st.age);
+      bmr = Math.round(st.gender === 'male' ? base + 5 : base - 161);
+      tdee = Math.round(bmr * (+st.activity || 1.375));
+    }
+
+    return {
+      am: today.am, pm: today.pm, diff: diff,
+      level: WB.diffLevel(diff != null ? diff : avgDiff),
+      rows: rows,
+      avgDiff: avgDiff,
+      am7: am7, amPrev: amPrev, trend: trend,
+      bmr: bmr, tdee: tdee,
+      hasProfile: !!(st.height && st.age && st.gender)
+    };
+  };
+
+  /* ============================================================
+   * 夜间代谢：今晨体重 − 前一天晚体重
+   * 结果为负 = 夜里正常消耗掉了；掉 0.2~1.0kg 是健康区间。
+   * ========================================================= */
+  WB.nightLevel = function (delta) {
+    if (delta == null) return { label: '待记录', tip: '晚上睡前、早上起床各称一次，就能算出夜间代谢。', color: '#b394a1' };
+    var drop = -delta;                       // 夜间掉秤量（正 = 掉秤）
+    if (drop < 0) return { label: '夜间回升', tip: '比昨晚还重了一点：多半是晚餐太晚或睡前喝水多，试试 19 点前吃完晚餐。', color: '#e0952f' };
+    if (drop < 0.2) return { label: '代谢偏慢', tip: '夜里几乎没掉秤：晚餐早点吃、睡够 7 小时，代谢才转得动。', color: '#8fb3d9' };
+    if (drop < 0.5) return { label: '代谢平稳', tip: '夜间正常消耗，身体节奏很稳 🩷', color: '#5aa06f' };
+    if (drop < 1.0) return { label: '代谢很棒', tip: '夜间消耗充足，作息和饮食都到位啦 ✨', color: '#5aa06f' };
+    return { label: '掉秤偏多', tip: '一夜掉太多：别吃太咸也别吃太少，睡前可以少量补水，别让身体以为在挨饿。', color: '#e0952f' };
+  };
+
+  WB.nightMetab = function (date) {
+    date = date || today();
+    var w = WB.weightOf(date);
+    var y = WB.weightOf(D.addDays(date, -1));
+    var delta = (w.am != null && y.pm != null) ? Math.round((w.am - y.pm) * 100) / 100 : null;
+    return {
+      date: date, am: w.am, pmPrev: y.pm, delta: delta,
+      drop: delta == null ? null : Math.round(-delta * 100) / 100,
+      level: WB.nightLevel(delta)
+    };
+  };
+
+  /* 近 n 天夜间代谢平均 + 晨重趋势（复盘的体重小结用） */
+  WB.weightDigest = function (date, n) {
+    date = date || today(); n = n || 7;
+    var deltas = [], rows = [];
+    D.lastNDates(n, date).forEach(function (d) {
+      var m = WB.nightMetab(d);
+      if (m.delta != null) { deltas.push(m.delta); rows.push(m); }
+    });
+    var ws = WB.weightStats(date);
+    return {
+      night: WB.nightMetab(date),
+      avgDrop: deltas.length ? Math.round(-deltas.reduce(function (a, b) { return a + b; }, 0) / deltas.length * 100) / 100 : null,
+      days: deltas.length,
+      rows: rows,
+      am: ws.am, pm: ws.pm, diff: ws.diff, level: ws.level,
+      trend: ws.trend, bmr: ws.bmr, tdee: ws.tdee, hasProfile: ws.hasProfile
+    };
+  };
+
+  /* ============================================================
+   * 复盘建议 & 鼓励：全部由当天真实数据生成（小自律口吻）
+   * ========================================================= */
+  WB.reviewAdvice = function (date) {
+    date = date || today();
+    var out = [];
+    var p = WB.progress(date);
+    var who = WB.USER_NAME || '你';
+    var plan = WB.guidePlan(date);
+    var wd = WB.weightDigest(date, 7);
+    var gap = WB.gapScan(date, 7);
+
+    /* 1. 完成度 */
+    if (p.total === 0) {
+      out.push({ icon: '🌱', tone: 'ok', text: who + '今天还没有可打卡的任务，先去各板块把今天的必做项设好吧。' });
+    } else if (p.pct >= 90) {
+      out.push({ icon: '🎉', tone: 'ok', text: '今天完成 ' + p.done + '/' + p.total + '（' + p.pct + '%），几乎是满分的一天，' + who + '真的稳！' });
+    } else if (p.pct >= 60) {
+      out.push({ icon: '💪', tone: 'ok', text: '今天完成 ' + p.done + '/' + p.total + '（' + p.pct + '%），主线没落下，剩下的一小截明天补上就好。' });
+    } else if (p.pct >= 30) {
+      out.push({ icon: '🫧', tone: 'warn', text: '今天只完成 ' + p.done + '/' + p.total + '（' + p.pct + '%）。别自责，明天先挑最容易的一项做掉，惯性就回来了。' });
+    } else if (p.done > 0) {
+      out.push({ icon: '🌙', tone: 'warn', text: '今天完成 ' + p.done + '/' + p.total + '（' + p.pct + '%）。状态不好就别硬扛，明早先做 5 分钟，先把节奏接回来。' });
+    } else {
+      out.push({ icon: '😶', tone: 'warn', text: '今天一项都没打卡。没关系，一天空白不会毁掉计划，明天只做「最小一步」：喝口水 + 勾一项。' });
+    }
+
+    /* 2. 断更最多的板块 */
+    var miss = (gap.miss || []).filter(function (m) { return m.gap >= 2; })[0];
+    if (miss) {
+      out.push({ icon: miss.icon || '🔔', tone: 'warn', text: '「' + miss.name + '」已经断了 ' + miss.gap + ' 天，最容易悄悄掉队的就是它，明天优先安排它。' });
+    }
+
+    /* 3. 导游备考 */
+    if (plan.phase === 'learn' && plan.chapter) {
+      var cs = WB.guideChapter(plan.chapter.key);
+      if (cs.st === 0) {
+        out.push({ icon: '🧭', tone: 'warn', text: '今日章节「' + plan.chapter.short + ' 第' + plan.chapter.no + '章」还没标记已学，睡前翻一遍教材也能算过 🌙' });
+      } else {
+        out.push({ icon: '🧭', tone: 'ok', text: '今日章节「' + plan.chapter.short + ' 第' + plan.chapter.no + '章」已完成，离考场又近一步，稳住这个节奏 🎯' });
+      }
+      if (plan.behind > 0) {
+        out.push({ icon: '⏳', tone: 'warn', text: '章节进度落后 ' + plan.behind + ' 章，点「🧭 一键重排」把没学的顺延，别让窟窿越滚越大。' });
+      }
+    } else if (plan.phase === 'review') {
+      out.push({ icon: '🔥', tone: 'ok', text: '已进入总复习第 ' + plan.reviewDay + ' 天，四科轮着过 + 重做错题，考前不用再追新内容了。' });
+    }
+
+    /* 4. 体重 / 夜间代谢 */
+    var nm = wd.night;
+    if (nm.delta != null) {
+      out.push({
+        icon: '⚖️', tone: (nm.drop >= 0.2 && nm.drop < 1.0) ? 'ok' : 'warn',
+        text: '夜间代谢：今晨 ' + nm.am + 'kg − 昨晚 ' + nm.pmPrev + 'kg = ' +
+          (nm.drop >= 0 ? '掉 ' + nm.drop + 'kg' : '回升 ' + Math.abs(nm.drop) + 'kg') + '（' + nm.level.label + '）。' + nm.level.tip
+      });
+    } else {
+      out.push({ icon: '⚖️', tone: 'warn', text: '今天还算不出夜间代谢：早晚各称一次（在健身板块记录），第二天就能看到夜里消耗了多少。' });
+    }
+    if (wd.trend != null && Math.abs(wd.trend) >= 0.3) {
+      out.push({
+        icon: wd.trend < 0 ? '📉' : '📈', tone: wd.trend < 0 ? 'ok' : 'warn',
+        text: '近 7 天晨重比上周' + (wd.trend < 0
+          ? '下降 ' + Math.abs(wd.trend) + 'kg，方向对啦，继续按这个节奏 🌸'
+          : '上升 ' + wd.trend + 'kg，多半是水分或饮食波动，别慌，先把晚餐时间和睡眠稳住。')
+      });
+    }
+
+    /* 5. 收尾鼓励 */
+    var seq = WB.streakAny(date);
+    var cheer = (seq >= 3 ? '连续打卡 ' + seq + ' 天了，' : '') + (WB.randomPraise ? WB.randomPraise() : '今天也要好好加油呀 🎀');
+    out.push({ icon: '💗', tone: 'cheer', text: cheer + '　—— 你的小自律留 🎀' });
+    return out;
   };
 
   /* =========================================================
@@ -1853,6 +2199,274 @@ WB.BODY_FIELDS = [
     var left = diffDays(today(), target);
     return { date: target, left: left };
   };
+
+  /* ============================================================
+   * 导游备考：四本教材章节闯关 + 面试导游词（12 篇）
+   * 排程：业务 → 法规 → 全导 → 地导，一天一章；导游词每 4 天一篇同步推进。
+   * 章名 / 篇名可在页面上 ✏️ 改成你教材的真实目录。
+   * ============================================================ */
+  var D = WB.date;
+
+  function gs() {
+    if (!S.guideStudy) S.guideStudy = { startDate: '', chapters: {}, speeches: {}, titles: {} };
+    var g = S.guideStudy;
+    if (!g.chapters) g.chapters = {};
+    if (!g.speeches) g.speeches = {};
+    if (!g.titles) g.titles = {};
+    if (!g.startDate) g.startDate = WB.GUIDE_START || today();
+    return g;
+  }
+  WB.guideStudyState = function () { return gs(); };
+
+  /* 扁平章节表：业务 10 → 法规 15 → 全导 12 → 地导 8，共 45 章 */
+  WB.guideFlat = function () {
+    var t = gs().titles, out = [];
+    (WB.GUIDE_BOOKS || []).forEach(function (b) {
+      (b.titles || []).forEach(function (name, i) {
+        var key = b.id + '-' + (i + 1);
+        out.push({
+          key: key, book: b.id, bookName: b.name, short: b.short, icon: b.icon,
+          no: i + 1, title: t[key] || name
+        });
+      });
+    });
+    return out;
+  };
+
+  WB.guideChapter = function (key) {
+    return gs().chapters[key] || { st: 0, date: '', quiz: '', rate: '' };
+  };
+  WB.guideChapterSet = function (key, patch) {
+    var g = gs();
+    var c = g.chapters[key] || { st: 0, date: '', quiz: '', rate: '' };
+    for (var k in patch) c[k] = patch[k];
+    if (patch.st != null) {
+      if (patch.st === 0) c.date = ''; else c.date = today();
+    }
+    g.chapters[key] = c; save(); return c;
+  };
+  /* 点一下轮转：未学 → 已学 → 已巩固 → 未学 */
+  WB.guideChapterCycle = function (key) {
+    var st = (WB.guideChapter(key).st + 1) % 3;
+    WB.guideChapterSet(key, { st: st });
+    return st;
+  };
+
+  WB.guideSpeech = function (id) {
+    return gs().speeches[id] || { st: 0, date: '' };
+  };
+  WB.guideSpeechSet = function (id, patch) {
+    var g = gs();
+    var c = g.speeches[id] || { st: 0, date: '' };
+    for (var k in patch) c[k] = patch[k];
+    if (patch.st != null) { if (patch.st === 0) c.date = ''; else c.date = today(); }
+    g.speeches[id] = c; save(); return c;
+  };
+  WB.guideSpeechCycle = function (id) {
+    var st = (WB.guideSpeech(id).st + 1) % 3;
+    WB.guideSpeechSet(id, { st: st });
+    return st;
+  };
+  WB.guideSpeechName = function (id) {
+    var t = gs().titles[id];
+    if (t) return t;
+    var s = (WB.GUIDE_SPEECHES || []).filter(function (x) { return x.id === id; })[0];
+    return s ? s.name : id;
+  };
+
+  /* 今日计划：返回今天该学的章 / 该攻的导游词 / 所处阶段 */
+  WB.guidePlan = function (date) {
+    date = date || today();
+    var g = gs(), flat = WB.guideFlat(), R = WB.GUIDE_RULE || { chapterPerDay: 1, speechEvery: 4 };
+    var off = D.diffDays(g.startDate, date);
+    var out = {
+      date: date, start: g.startDate, offset: off, total: flat.length,
+      phase: '', chapter: null, dayIndex: 0, reviewDay: 0, reviewBook: null,
+      speech: null, speechIndex: -1, speechLeft: 0, behind: 0
+    };
+    if (off < 0) { out.phase = 'before'; out.restDays = -off; return out; }
+
+    if (off < flat.length) {
+      out.phase = 'learn';
+      out.chapter = flat[off];
+      out.dayIndex = off + 1;
+    } else {
+      out.phase = 'review';
+      out.reviewDay = off - flat.length + 1;
+      out.reviewBook = (WB.GUIDE_BOOKS || [])[(out.reviewDay - 1) % (WB.GUIDE_BOOKS || [1]).length];
+    }
+
+    /* 导游词：每 speechEvery 天一篇；若计划的这篇已脱稿，自动跳到第一篇没搞定的 */
+    var sp = WB.GUIDE_SPEECHES || [];
+    if (sp.length) {
+      var si = Math.floor(off / R.speechEvery);
+      if (si > sp.length - 1) si = sp.length - 1;
+      var firstTodo = -1;
+      for (var i = 0; i < sp.length; i++) { if (WB.guideSpeech(sp[i].id).st < 2) { firstTodo = i; break; } }
+      if (firstTodo >= 0 && firstTodo > si) si = firstTodo;
+      out.speech = sp[si];
+      out.speechIndex = si;
+      out.speechLeft = Math.max(0, R.speechEvery - (off % R.speechEvery) - 1);
+      out.speechAllDone = firstTodo < 0;
+    }
+
+    /* 落后章数：计划日已过、但仍未学（st<1）的章 */
+    out.behind = flat.filter(function (c, i) {
+      return i < off && WB.guideChapter(c.key).st < 1;
+    }).length;
+    return out;
+  };
+
+  /* 全程时间表：每科的起止日期 */
+  WB.guideTimeline = function () {
+    var g = gs(), flat = WB.guideFlat(), out = [], pos = 0;
+    (WB.GUIDE_BOOKS || []).forEach(function (b) {
+      var n = (b.titles || []).length;
+      out.push({
+        id: b.id, name: b.name, short: b.short, icon: b.icon, n: n,
+        from: D.addDays(g.startDate, pos), to: D.addDays(g.startDate, pos + n - 1)
+      });
+      pos += n;
+    });
+    var R = WB.GUIDE_RULE || { speechEvery: 4 };
+    return {
+      books: out,
+      totalDays: flat.length,
+      end: D.addDays(g.startDate, flat.length - 1),
+      reviewFrom: D.addDays(g.startDate, flat.length),
+      exam: ((S.settings && S.settings.examDate) || '')
+    };
+  };
+
+  /* 统计 */
+  WB.guideStats = function () {
+    var flat = WB.guideFlat();
+    var books = (WB.GUIDE_BOOKS || []).map(function (b) {
+      var cs = flat.filter(function (c) { return c.book === b.id; });
+      var done = 0, firm = 0;
+      cs.forEach(function (c) {
+        var st = WB.guideChapter(c.key).st;
+        if (st >= 1) done++;
+        if (st >= 2) firm++;
+      });
+      return {
+        id: b.id, name: b.name, short: b.short, icon: b.icon,
+        total: cs.length, done: done, firm: firm,
+        pct: cs.length ? Math.round(done / cs.length * 100) : 0
+      };
+    });
+    var chDone = 0, chFirm = 0;
+    flat.forEach(function (c) {
+      var st = WB.guideChapter(c.key).st;
+      if (st >= 1) chDone++;
+      if (st >= 2) chFirm++;
+    });
+    var sp = WB.GUIDE_SPEECHES || [], spTouch = 0, spDone = 0;
+    sp.forEach(function (s) {
+      var st = WB.guideSpeech(s.id).st;
+      if (st >= 1) spTouch++;
+      if (st >= 2) spDone++;
+    });
+    return {
+      books: books,
+      chTotal: flat.length, chDone: chDone, chFirm: chFirm,
+      chPct: flat.length ? Math.round(chDone / flat.length * 100) : 0,
+      spTotal: sp.length, spTouch: spTouch, spDone: spDone,
+      spPct: sp.length ? Math.round(spDone / sp.length * 100) : 0
+    };
+  };
+
+  /* ============================================================
+   * 学习足迹：某天在哪些板块学了什么 / 哪天是空白
+   * ============================================================ */
+  /* 参与「学习足迹」统计的板块（排除总控 / 复盘 / 存档） */
+  var FOOT_SECS = ['fitness', 'english', 'guide', 'knowledge', 'reading', 'news'];
+  WB.footSections = function () {
+    return WB.SECTIONS.filter(function (s) { return FOOT_SECS.indexOf(s.id) >= 0; });
+  };
+
+  WB.dayFootprint = function (date) {
+    var secs = WB.footSections().map(function (s) {
+      var p = WB.progress(date, [s.id]);
+      return { id: s.id, name: s.name, icon: s.icon, done: p.done, total: p.total, pct: p.pct, on: p.done > 0 };
+    });
+    var all = WB.progress(date);
+    /* 导游备考：当天完成的章节 / 导游词（按完成日期归集） */
+    var chs = [], sps = [];
+    WB.guideFlat().forEach(function (c) {
+      var cc = gs().chapters[c.key];
+      if (cc && cc.st >= 1 && cc.date === date) chs.push(c);
+    });
+    (WB.GUIDE_SPEECHES || []).forEach(function (sp) {
+      var ss = gs().speeches[sp.id];
+      if (ss && ss.st >= 1 && ss.date === date) sps.push(sp);
+    });
+    return {
+      date: date, weekday: D.weekday(date),
+      done: all.done, total: all.total, pct: all.pct,
+      secs: secs, chapters: chs, speeches: sps,
+      empty: all.done === 0
+    };
+  };
+
+  /* 缺口扫描：近 n 天里的空白日 / 低效日 / 各板块断更天数 */
+  WB.gapScan = function (end, n) {
+    end = end || today(); n = n || 30;
+    var dates = D.lastNDates(n, end);
+    var out = { blank: [], low: [], miss: [], days: n };
+    dates.forEach(function (d) {
+      var p = WB.progress(d);
+      if (p.done === 0) out.blank.push(d);
+      else if (p.pct < 30) out.low.push({ date: d, done: p.done, total: p.total, pct: p.pct });
+    });
+    WB.footSections().forEach(function (s) {
+      var gap;
+      if (WB.sectionActive(s.id, end)) gap = 0;
+      else {
+        gap = 0;
+        for (var i = 1; i < 90; i++) {
+          if (WB.sectionActive(s.id, D.addDays(end, -i))) break;
+          gap++;
+        }
+        if (gap >= 89) gap = -1;      // 从来没有记录
+      }
+      var last = '';
+      for (var j = 0; j < 400; j++) {
+        var d2 = D.addDays(end, -j);
+        if (WB.sectionActive(s.id, d2)) { last = d2; break; }
+      }
+      out.miss.push({ id: s.id, name: s.name, icon: s.icon, gap: gap, last: last });
+    });
+    out.miss.sort(function (a, b) { return (b.gap < 0 ? 999 : b.gap) - (a.gap < 0 ? 999 : a.gap); });
+    return out;
+  };
+
+  /* 导游备考轨迹：已完成的章节 / 导游词，按完成日期倒序 */
+  WB.guideTrail = function (limit) {
+    var out = [];
+    WB.guideFlat().forEach(function (c) {
+      var cc = gs().chapters[c.key];
+      if (cc && cc.st >= 1) out.push({ date: cc.date || '', kind: 'ch', st: cc.st, title: c.short + ' 第' + c.no + '章《' + c.title + '》' });
+    });
+    (WB.GUIDE_SPEECHES || []).forEach(function (sp) {
+      var ss = gs().speeches[sp.id];
+      if (ss && ss.st >= 1) out.push({ date: ss.date || '', kind: 'sp', st: ss.st, title: '导游词《' + WB.guideSpeechName(sp.id) + '》' });
+    });
+    out.sort(function (a, b) { return a.date < b.date ? 1 : (a.date > b.date ? -1 : 0); });
+    return limit ? out.slice(0, limit) : out;
+  };
+
+  /* 改计划开始日 / 一键重排（把没学的章从今天起重新排一遍） */
+  WB.guideSetStart = function (d) { gs().startDate = d || today(); save(); };
+  WB.guideReschedule = function (from) {
+    var g = gs(), flat = WB.guideFlat();
+    from = from || today();
+    var i = 0;
+    while (i < flat.length && WB.guideChapter(flat[i].key).st >= 1) i++;
+    g.startDate = D.addDays(from, -i);
+    save();
+    return g.startDate;
+  };
 })();
 
 </script>
@@ -1947,6 +2561,112 @@ WB.BODY_FIELDS = [
       s += '<circle cx="' + X(lastValid).toFixed(1) + '" cy="' + Y(points[lastValid].value).toFixed(1) + '" r="3.5" fill="' + color + '"/>';
     }
     return s + '</svg>';
+  };
+})();
+
+</script>
+<script>
+/* ============================================================
+ * speech.js —— 双语好句语音朗读 / 跟读（Web Speech API）
+ *
+ * 说明：纯浏览器本地合成，不联网、不上传任何内容。
+ * iOS Safari 限制：必须在用户点击后才会出声，所以全部由按钮触发。
+ * ============================================================ */
+(function () {
+  var synth = (typeof window !== 'undefined' && window.speechSynthesis) || null;
+  var voices = [];
+  var supported = !!synth;
+
+  function loadVoices() {
+    if (!synth) return;
+    voices = synth.getVoices() || [];
+  }
+  if (synth) {
+    loadVoices();
+    if (typeof synth.onvoiceschanged !== 'undefined') {
+      synth.onvoiceschanged = loadVoices;   // 部分浏览器首次为空，稍后会回调
+    }
+    /* Chrome 有时不触发回调，兜底轮询几次 */
+    var times = 0;
+    var timer = setInterval(function () {
+      loadVoices();
+      if (voices.length || ++times > 10) clearInterval(timer);
+    }, 300);
+  }
+
+  /* 挑一个合适的语音：优先指定地区，再退到同语言任意语音 */
+  function pickVoice(lang, prefer) {
+    if (!voices.length) return null;
+    var lower = lang.toLowerCase();
+    var base = lower.split('-')[0];
+    var i, v;
+    if (prefer) {
+      for (i = 0; i < voices.length; i++) {
+        v = voices[i];
+        if ((v.lang || '').toLowerCase().replace('_', '-').indexOf(prefer.toLowerCase()) === 0) return v;
+      }
+    }
+    for (i = 0; i < voices.length; i++) {
+      v = voices[i];
+      if ((v.lang || '').toLowerCase().replace('_', '-').indexOf(lower) === 0) return v;
+    }
+    for (i = 0; i < voices.length; i++) {
+      v = voices[i];
+      if ((v.lang || '').toLowerCase().replace('_', '-').indexOf(base) === 0) return v;
+    }
+    return null;
+  }
+
+  /* 当前是否正在朗读（用于按钮文案） */
+  var speaking = false;
+
+  WB.speak = function (text, opt) {
+    opt = opt || {};
+    if (!supported) {
+      WB.toast && WB.toast('当前浏览器不支持语音朗读，换 Safari / Chrome 试试', 'err');
+      return false;
+    }
+    if (!text) return false;
+    try {
+      synth.cancel();                       // 停掉上一句，避免叠音
+      var u = new SpeechSynthesisUtterance(String(text));
+      var lang = opt.lang || 'en-US';
+      u.lang = lang;
+      u.rate = opt.rate || 1;               // 慢速跟读用 0.6
+      u.pitch = opt.pitch || 1;
+      u.volume = opt.volume == null ? 1 : opt.volume;
+      var v = pickVoice(lang, opt.prefer);
+      if (v) u.voice = v;
+      speaking = true;
+      u.onend = function () { speaking = false; if (opt.onEnd) opt.onEnd(); };
+      u.onerror = function () { speaking = false; if (opt.onEnd) opt.onEnd(); };
+      synth.speak(u);
+      return true;
+    } catch (e) {
+      WB.toast && WB.toast('朗读失败：' + e.message, 'err');
+      return false;
+    }
+  };
+
+  WB.stopSpeak = function () {
+    if (synth) { try { synth.cancel(); } catch (e) {} }
+    speaking = false;
+  };
+
+  WB.isSpeaking = function () { return speaking; };
+
+  WB.speechSupported = function () { return supported; };
+
+  /* 好句卡片的语音条：英文原速 / 英文慢速 / 中文释义 / 停止 */
+  WB.speakBarHTML = function (en, zh) {
+    var tip = supported ? '' : '<div class="hint warn">当前浏览器不支持语音朗读，建议用 Safari / Chrome 打开。</div>';
+    return '<div class="speak-bar">' +
+      '<button class="btn sm primary" data-act="speak" data-lang="en-US" data-rate="1" data-text="' + WB.esc(en) + '">🔊 朗读英文</button>' +
+      '<button class="btn sm" data-act="speak" data-lang="en-US" data-rate="0.65" data-text="' + WB.esc(en) + '">🐢 慢速跟读</button>' +
+      '<button class="btn sm" data-act="speak" data-lang="zh-CN" data-rate="1" data-text="' + WB.esc(zh) + '">🇨🇳 中文释义</button>' +
+      '<button class="btn sm ghost" data-act="stop-speak">⏹ 停止</button>' +
+      '<span class="sp-hint">点一下就出声，跟着念 3 遍效果最好</span>' +
+      '</div>' + tip;
   };
 })();
 
@@ -2093,7 +2813,8 @@ WB.BODY_FIELDS = [
   };
 
   WB.taskList = function (section, date, opt) {
-    var tasks = WB.tasksOf(section, date);
+    /* 早晚体重有专门的「体重 & 代谢」卡片，不在通用任务列表里重复出现 */
+    var tasks = WB.tasksOf(section, date).filter(function (t) { return !t.weightRole; });
     if (!tasks.length) return '<div class="empty">还没有任务，用下方按钮新增你的专属计划。</div>';
     return '<div class="tasks">' + tasks.map(function (t) { return WB.taskRow(t, date, opt); }).join('') + '</div>';
   };
@@ -2500,17 +3221,17 @@ WB.BODY_FIELDS = [
     if (isToday) {
       html += '<div class="banner"><div class="b-ico">🎀</div><div>' +
         '<div class="b-t">' + greet + '</div>' +
-        '<div class="b-d">' + WB.esc(WB.state.settings.greeting || '嗨，老板大人') +
+        '<div class="b-d">' + WB.esc(WB.state.settings.greeting || WB.DEFAULT_GREETING || '嗨，财财') +
         '，把每一天过得有迹可循，就是了不起的自律。</div></div></div>';
     }
     html += '<div class="banner' + (isToday ? '' : ' amber') + '"><div class="b-ico">今</div><div>' +
       '<div class="b-t">' + WB.date.md(date) + ' ' + WB.date.weekday(date) + (isToday ? ' · 今天' : ' · 回溯查看') + '</div>' +
       '<div class="b-d">距导游资格考试（' + exam.date + '）还有 <b>' + exam.left + '</b> 天。' +
-      '当日全部任务 ' + p.done + '/' + p.total + '，今日清单 ' + pl.done + '/' + pl.total + '。每天勾完这一页，就是给自己攒底子。</div>' +
+      '今日已打卡 <b>' + pl.doneAll + '</b> / ' + pl.listTotal + ' 项，打满 <b>' + pl.total + '</b> 项即可领金币。每天勾完这一页，就是给自己攒底子。</div>' +
       '</div></div>';
 
     html += '<div class="grid g4">' +
-      WB.stat('今日清单进度', pl.pct + '<small>%</small>', pl.done + ' / ' + pl.total + ' 条精选任务', 'accent') +
+      WB.stat('今日打卡达标度', pl.pct + '<small>%</small>', '已打卡 ' + pl.doneAll + ' / 目标 ' + pl.total + ' 项', 'accent') +
       WB.stat('板块任务完成', p.pct + '<small>%</small>', p.done + ' / ' + p.total + ' 项', 'blue') +
       WB.stat('备考倒计时', exam.left + '<small>天</small>', '导游考试 ' + exam.date, 'amber') +
       WB.stat('金币余额', balance + '<small>枚</small>', '可兑换心愿奖励', '') +
@@ -2519,8 +3240,8 @@ WB.BODY_FIELDS = [
     /* 全勤庆祝 */
     if (pl.allDone) {
       html += '<div class="banner"><div class="b-ico">🎉</div><div>' +
-        '<div class="b-t">今日清单全部完成！' + WB.date.md(date) + ' 的你超棒～</div>' +
-        '<div class="b-d">别忘了去下方「🪙 金币中心」领取全勤金币。坚持不是一时热血，而是像今天这样，一天一天地攒。</div></div></div>';
+        '<div class="b-t">今日打卡已达标！' + WB.date.md(date) + ' 的你超棒～</div>' +
+        '<div class="b-d">已完成 ' + pl.doneAll + ' 项（目标 ' + pl.total + ' 项），别忘了去下方「🪙 金币中心」领金币。坚持不是一时热血，而是像今天这样，一天一天地攒。</div></div></div>';
     }
 
     /* 🧺 三大分页：今日任务 / 本周计划 / 长期目标 */
@@ -2587,6 +3308,63 @@ WB.BODY_FIELDS = [
       title: '🏃‍♀️ 今日必做打卡', sub: '八段锦 · 臀腿 · 足弓，每天独立记录',
       body: WB.taskList('fitness', date, { showFixed: true }) + WB.addTaskForm('fitness', date) +
         '<div class="hint">新增项目会出现在上方列表中，可随时删除；勾选与数值都会进入历史记录，可随时回溯。</div>'
+    });
+
+    /* ⚖️ 早晚体重 & 代谢 */
+    var ws = WB.weightStats(date);
+    var st = WB.state.settings || {};
+    function wIn(id, val, ph) {
+      return '<input type="number" step="0.1" min="20" max="200" class="w-in" placeholder="' + ph + '" value="' +
+        (val != null ? val : '') + '" data-act="log-value" data-id="' + id + '"/>';
+    }
+    var trendTxt = ws.trend == null ? '再记几天就能看出趋势'
+      : (ws.trend <= -0.3 ? '近 7 天晨重平均下降 <b>' + Math.abs(ws.trend) + ' kg</b>，减脂/消肿见效 💪'
+        : ws.trend >= 0.3 ? '近 7 天晨重平均上升 <b>' + ws.trend + ' kg</b>，注意饮食与作息'
+        : '近 7 天晨重基本持平（波动 ' + ws.trend + ' kg），维持得不错');
+    var rows7 = ws.rows.length ? ws.rows.slice().reverse().map(function (r) {
+      return '<div class="kv"><span class="k">' + WB.date.md(r.date) + '</span><span>' +
+        (r.am != null ? r.am + 'kg' : '—') + ' → ' + (r.pm != null ? r.pm + 'kg' : '—') +
+        (r.diff != null ? '　<span class="w-diff" style="color:' + WB.diffLevel(r.diff).color + '">' +
+          (r.diff > 0 ? '+' : '') + r.diff + 'kg</span>' : '') + '</span></div>';
+    }).join('') : '<div class="empty">还没有早晚体重记录</div>';
+
+    var metabBody = '<div class="w-inputs">' +
+        '<div class="w-box"><label>🌅 晨起体重</label>' + wIn('fit-weight-am', ws.am, '如 52.4') + '<span class="muted">kg</span></div>' +
+        '<div class="w-box"><label>🌙 睡前体重</label>' + wIn('fit-weight-pm', ws.pm, '如 53.2') + '<span class="muted">kg</span></div>' +
+      '</div>' +
+      '<div class="w-result" style="border-color:' + ws.level.color + '33">' +
+        '<div class="w-diff-big" style="color:' + ws.level.color + '">' +
+          (ws.diff != null ? (ws.diff > 0 ? '+' : '') + ws.diff + '<small>kg</small>' : '—') + '</div>' +
+        '<div class="w-meta"><b style="color:' + ws.level.color + '">' + ws.level.label + '</b>' +
+          '<span class="muted">' + WB.esc(ws.level.tip) + '</span></div>' +
+      '</div>' +
+      '<div class="grid g3 w-stats">' +
+        WB.stat('近 7 天平均晨重', (ws.am7 != null ? ws.am7.toFixed(1) : '—') + '<small>kg</small>', ws.amPrev != null ? '上周 ' + ws.amPrev.toFixed(1) + 'kg' : '再记几天', 'blue') +
+        WB.stat('近 7 天平均早晚差', (ws.avgDiff != null ? (ws.avgDiff > 0 ? '+' : '') + ws.avgDiff : '—') + '<small>kg</small>', '反映水肿与代谢', 'accent') +
+        (ws.bmr ? WB.stat('基础代谢 BMR', ws.bmr + '<small>kcal</small>', '日常消耗约 ' + ws.tdee + ' kcal', 'amber')
+                : WB.stat('基础代谢 BMR', '待填<small>档案</small>', '填身高/年龄/性别后估算', '')) +
+      '</div>' +
+      '<div class="hint">' + trendTxt + '。' +
+        (ws.bmr ? '按你的档案估算：基础代谢约 <b>' + ws.bmr + '</b> kcal/天，日常总消耗约 <b>' + ws.tdee + '</b> kcal/天。' : '') +
+        '同一台秤、晨起空腹与睡前各称一次最准。</div>' +
+      '<hr class="sep"/>' +
+      '<div class="add-row" style="border-top:none;padding-top:0;margin-top:0;flex-wrap:wrap">' +
+        '<label class="muted">身高 cm</label><input type="number" min="120" max="220" style="max-width:90px" value="' + (+st.height || '') + '" placeholder="160" data-act="setting" data-key="height"/>' +
+        '<label class="muted">年龄</label><input type="number" min="10" max="90" style="max-width:80px" value="' + (+st.age || '') + '" placeholder="26" data-act="setting" data-key="age"/>' +
+        '<label class="muted">性别</label><select style="max-width:100px" data-act="setting" data-key="gender">' +
+          '<option value="">选择</option>' +
+          '<option value="female"' + (st.gender === 'female' ? ' selected' : '') + '>女</option>' +
+          '<option value="male"' + (st.gender === 'male' ? ' selected' : '') + '>男</option></select>' +
+        '<label class="muted">活动量</label><select style="max-width:150px" data-act="setting" data-key="activity">' +
+          [['1.2', '久坐少动'], ['1.375', '轻度活动（每周1-3练）'], ['1.55', '中度活动（每周3-5练）'], ['1.725', '高强度（每周6-7练）']].map(function (o) {
+            return '<option value="' + o[0] + '"' + (String(st.activity || '1.375') === o[0] ? ' selected' : '') + '>' + o[1] + '</option>';
+          }).join('') + '</select>' +
+      '</div>' +
+      '<div class="k" style="font-size:11.5px;color:var(--muted);margin:2px 0 6px">近 7 天早晚记录</div>' + rows7;
+
+    html += WB.card({
+      title: '⚖️ 早晚体重 & 代谢', sub: '晨起 / 睡前各一次，看水肿与代谢节奏',
+      body: metabBody
     });
 
     /* 身体状态记录 */
@@ -2696,6 +3474,7 @@ WB.BODY_FIELDS = [
       body: '<div class="quote">' +
         '<div class="en">“' + WB.esc(q.en) + '”</div>' +
         '<div class="zh">' + WB.esc(q.zh) + '</div>' +
+        (WB.speakBarHTML ? WB.speakBarHTML(q.en, q.zh) : '') +
         '<div class="q-meta"><span class="q-lab">第 ' + (idx + 1) + ' / ' + WB.SENTENCES.length + ' 句</span>' +
           '<button class="btn sm primary" data-act="save-sentence" data-idx="' + idx + '">收藏进句库</button>' +
           '<button class="btn sm" data-act="read-done">标记已跟读</button>' +
@@ -2747,6 +3526,126 @@ WB.BODY_FIELDS = [
   /* =========================================================
    * 四、导游学习（11.21 冲刺）
    * ========================================================= */
+  /* =========================================================
+   * 三之二、导游备考：四科章节闯关 + 面试导游词
+   * 顺序固定：业务 10 → 法规 15 → 全导 12 → 地导 8（一天一章）
+   * 导游词 12 篇与四科同步，每 4 天攻下一篇。
+   * ========================================================= */
+  function gTxt(st) { return (WB.GSTATE || ['未学', '已学', '已巩固'])[st] || ''; }
+  function sTxt(st) { return (WB.SSTATE || ['未开始', '熟悉中', '可脱稿'])[st] || ''; }
+  var CHIP_S = ['未', '学', '固'];
+
+  WB.guideStudyHTML = function (date) {
+    var plan = WB.guidePlan(date);
+    var st = WB.guideStats();
+    var tl = WB.guideTimeline();
+    var R = WB.GUIDE_RULE || { chapterPerDay: 1, speechEvery: 4 };
+    var h = '';
+
+    /* ---- 1. 今日备考任务 ---- */
+    var t1 = '';
+    if (plan.phase === 'before') {
+      t1 = '<div class="gtoday"><div class="gt-ico">🌱</div><div class="gt-b">' +
+        '<div><b>计划 ' + plan.start + ' 开始</b>（还有 ' + plan.restDays + ' 天）</div>' +
+        '<div class="muted">这两天可以先：翻一遍四本教材目录、做一套真题摸底、把 12 篇导游词的示范视频找出来。</div>' +
+        '</div></div>';
+    } else if (plan.phase === 'learn') {
+      var c = plan.chapter, cs = WB.guideChapter(c.key);
+      t1 = '<div class="gtoday"><div class="gt-ico">' + (c.icon || '📖') + '</div><div class="gt-b">' +
+        '<div><b>今日第 ' + plan.dayIndex + ' / ' + plan.total + ' 章</b>　' + c.short + ' 第 ' + c.no + ' 章《' + WB.esc(c.title) + '》</div>' +
+        '<div class="muted">建议顺序：教材 / 网课过一遍（约 1.5h）→ 本章配套刷题 ≥ 50 题 → 错题抄进下方「错题本」→ 睡前 5 分钟回顾框架。</div>' +
+        '<div class="gtg"><span class="gpill' + (cs.st >= 2 ? ' green' : (cs.st === 1 ? '' : ' gray')) + '">' + gTxt(cs.st) + '</span>' +
+        '<button class="btn sm primary" data-act="g-chapter" data-key="' + c.key + '">🔄 ' + gTxt(cs.st) + ' → ' + gTxt((cs.st + 1) % 3) + '</button>' +
+        '</div></div></div>';
+    } else {
+      t1 = '<div class="gtoday"><div class="gt-ico">🔥</div><div class="gt-b">' +
+        '<div><b>总复习第 ' + plan.reviewDay + ' 天</b>（四科 45 章已过完一轮）</div>' +
+        '<div class="muted">今日复盘：' + (plan.reviewBook ? plan.reviewBook.name : '—') +
+        ' —— 过章节框架 + 重做错题 + 一套模拟卷；每天留 30 分钟练导游词。</div></div></div>';
+    }
+
+    if (plan.speech) {
+      var sp = plan.speech, ss = WB.guideSpeech(sp.id);
+      t1 += '<div class="grow"><span class="gpill amber">🎤 面试导游词</span>' +
+        '<span>第 ' + (plan.speechIndex + 1) + ' / ' + st.spTotal + ' 篇《' + WB.esc(WB.guideSpeechName(sp.id)) + '》' +
+        '<span class="muted">（' + WB.esc(sp.city) + '）</span>' +
+        (plan.speechLeft > 0 ? '<span class="muted"> 还有 ' + plan.speechLeft + ' 天拿下</span>' : '<span class="gpill red">今天交稿</span>') + '</span>' +
+        '<span class="gpill' + (ss.st >= 2 ? ' green' : (ss.st === 1 ? '' : ' gray')) + '">' + sTxt(ss.st) + '</span>' +
+        '<button class="btn sm" data-act="g-speech" data-id="' + sp.id + '">🔄 ' + sTxt(ss.st) + ' → ' + sTxt((ss.st + 1) % 3) + '</button>' +
+        '</div>';
+    } else if (plan.speechAllDone) {
+      t1 += '<div class="grow"><span class="gpill green">🎤 12 篇导游词已全部可脱稿，每天抽 1 篇保持手感</span></div>';
+    }
+
+    t1 += '<div class="row-between"><span class="muted">计划开始日 <b>' + plan.start + '</b>　·　全程 ' + plan.total + ' 章，一天一章</span>' +
+      '<span><button class="btn sm ghost" data-act="g-start">📅 改开始日</button>' +
+      (plan.behind > 0 ? ' <button class="btn sm" data-act="g-reschedule">🧭 一键重排（落后 ' + plan.behind + ' 章）</button>' : '') +
+      '</span></div>';
+    h += WB.card({ title: '🎯 今日备考任务', sub: '跟着走就能在考前过完全部章节 + 12 篇导游词', body: t1 });
+
+    /* ---- 2. 四科章节闯关 ---- */
+    var flat = WB.guideFlat();
+    var curKey = plan.chapter ? plan.chapter.key : '';
+    var booksHTML = st.books.map(function (b) {
+      var cs = flat.filter(function (x) { return x.book === b.id; });
+      var chips = cs.map(function (x) {
+        var s0 = WB.guideChapter(x.key).st;
+        return '<button class="gchip st' + s0 + (x.key === curKey ? ' cur' : '') + '" data-act="g-chapter" data-key="' + x.key +
+          '" title="第 ' + x.no + ' 章 ' + WB.esc(x.title) + '（' + gTxt(s0) + '）">' + x.no +
+          '<small>' + CHIP_S[s0] + '</small></button>';
+      }).join('');
+      return '<div class="gbook">' +
+        '<div class="gbook-h"><span class="gb-n">' + (b.icon || '📘') + ' ' + b.short + ' · ' + WB.esc(b.name) + '</span>' +
+        '<span class="muted">' + b.done + ' / ' + b.total + ' 章（已巩固 ' + b.firm + '）</span>' +
+        '<button class="btn sm ghost" data-act="g-book-title" data-id="' + b.id + '">✏️ 改章名</button></div>' +
+        '<div class="bar"><i style="width:' + b.pct + '%"></i></div>' +
+        '<div class="gchips" style="margin-top:8px">' + chips + '</div></div>';
+    }).join('');
+    h += WB.card({
+      title: '📚 四科章节闯关', sub: '共 ' + st.chTotal + ' 章 · 已学 ' + st.chDone + ' 章（已巩固 ' + st.chFirm + '）· 点格子切换状态',
+      body: booksHTML +
+        '<div class="glegend"><span><i style="background:#fff"></i>未学</span>' +
+        '<span><i style="background:var(--accent-soft)"></i>已学</span>' +
+        '<span><i style="background:#ef7fa2;border-color:#ef7fa2"></i>已巩固</span>' +
+        '<span>粉框 = 今天该学的章</span></div>'
+    });
+
+    /* ---- 3. 面试导游词 ---- */
+    var curSp = plan.speech ? plan.speech.id : '';
+    var spHTML = (WB.GUIDE_SPEECHES || []).map(function (s, i) {
+      var ss = WB.guideSpeech(s.id);
+      return '<button class="gsp st' + ss.st + (s.id === curSp ? ' cur' : '') + '" data-act="g-speech" data-id="' + s.id + '">' +
+        '<b>' + (i + 1) + '. ' + WB.esc(WB.guideSpeechName(s.id)) + '</b>' +
+        '<small>' + WB.esc(s.city) + ' · ' + sTxt(ss.st) + '</small></button>';
+    }).join('');
+    h += WB.card({
+      title: '🎤 面试导游词 · 河南 12 篇',
+      sub: '已脱稿 ' + st.spDone + ' / ' + st.spTotal + ' 篇，与四科同步推进（每 ' + R.speechEvery + ' 天一篇）',
+      body: '<div class="gspeeches">' + spHTML + '</div>' +
+        '<div class="row-between" style="margin-top:10px"><span class="muted">每天朗读 3 遍，第 4 天脱稿讲一遍给自己听</span>' +
+        '<button class="btn sm ghost" data-act="g-speech-title">✏️ 改篇目</button></div>' +
+        '<div class="glegend"><span><i style="background:#fff"></i>未开始</span>' +
+        '<span><i style="background:var(--accent-soft)"></i>熟悉中</span>' +
+        '<span><i style="background:#ef7fa2;border-color:#ef7fa2"></i>可脱稿</span></div>'
+    });
+
+    /* ---- 4. 全程时间表 ---- */
+    var rows = tl.books.map(function (b) {
+      return '<div class="gtl-row"><span class="gtl-n">' + (b.icon || '📘') + ' ' + b.short + '</span>' +
+        '<span class="gtl-d">' + b.from + ' → ' + b.to + '</span>' +
+        '<span class="muted">' + b.n + ' 章 / ' + b.n + ' 天</span></div>';
+    }).join('');
+    rows += '<div class="gtl-row"><span class="gtl-n">🔥 总复习</span><span class="gtl-d">' + tl.reviewFrom + ' → 考前</span>' +
+      '<span class="muted">错题重做 + 模拟卷 + 导游词串讲</span></div>';
+    if (tl.exam) rows += '<div class="gtl-row"><span class="gtl-n">🎓 考试</span><span class="gtl-d">' + tl.exam + '</span><span class="muted">从容上场</span></div>';
+    h += WB.card({
+      title: '🗓️ 全程时间表', sub: '45 章 / 45 天排满，' + tl.end + ' 走完全部章节，之后全部留给复习',
+      body: '<div class="gtl">' + rows + '</div>'
+    });
+
+    return h;
+  };
+
   WB.render.guide = function (date) {
     var s = WB.state;
     var exam = WB.examInfo();
@@ -2790,6 +3689,19 @@ WB.BODY_FIELDS = [
       '<div class="b-d">' + WB.esc(WB.MOTTO.guide) + '　按每天 ' + target + ' 题计，剩余时间还能刷 <b>' + (exam.left * target) + '</b> 题。</div>' +
       '</div></div>';
     html += WB.jumpBar('guide');
+
+    /* 备考闯关总览：章节 / 导游词 / 今日进度 */
+    var gp = WB.guidePlan(date), gst = WB.guideStats();
+    var todayP = gp.phase === 'learn' ? ('第 ' + gp.dayIndex + '<small>/' + gp.total + ' 天</small>')
+      : gp.phase === 'review' ? ('复习第 ' + gp.reviewDay + '<small>天</small>')
+        : '<small>未开始</small>';
+    html += '<div class="grid g3">' +
+      WB.stat('章节闯关', gst.chDone + '<small>/' + gst.chTotal + ' 章</small>', '已巩固 ' + gst.chFirm + ' 章', 'accent') +
+      WB.stat('面试导游词', gst.spDone + '<small>/' + gst.spTotal + ' 篇</small>', '熟悉中 ' + gst.spTouch + ' 篇', 'blue') +
+      WB.stat('今日进度', todayP, gp.start + ' 起', 'amber') +
+      '</div>';
+
+    html += WB.guideStudyHTML(date);
 
     html += '<div class="grid g4">' +
       WB.stat('考试倒计时', exam.left + '<small>天</small>', exam.date, 'amber') +
@@ -3145,6 +4057,87 @@ WB.BODY_FIELDS = [
         '</div>'
     });
 
+    /* ---------- 🗺️ 每日学习足迹：哪天学了什么 / 哪天空了 ---------- */
+    var fdays = WB.footDays || 14;
+    var fDates = D.lastNDates(fdays, date).slice().reverse();
+    var fRows = fDates.map(function (d) {
+      var fp = WB.dayFootprint(d);
+      var dots = fp.secs.map(function (s) {
+        return '<i class="fdot' + (s.on ? ' on' : '') + '" title="' + WB.esc(s.name) + ' ' + s.done + '/' + s.total + '">' +
+          (s.icon || '🎀') + '</i>';
+      }).join('');
+      var tags = '';
+      fp.chapters.forEach(function (c) { tags += '<span class="ftag">📖 ' + c.short + ' 第' + c.no + '章</span>'; });
+      fp.speeches.forEach(function (sp) { tags += '<span class="ftag amber">🎤 ' + WB.esc(WB.guideSpeechName(sp.id)) + '</span>'; });
+      return '<div class="frow' + (fp.empty ? ' empty' : '') + (d === D.today() ? ' today' : '') + '" data-act="foot-go" data-date="' + d + '">' +
+        '<div class="fr-d"><b>' + D.md(d) + '</b><small>' + fp.weekday + '</small></div>' +
+        '<div class="fr-dots">' + dots + '</div>' +
+        '<div class="fr-r"><div class="fr-bar"><i style="width:' + fp.pct + '%"></i></div>' +
+        '<span class="fr-n">' + (fp.empty ? '空白日' : fp.done + '/' + fp.total) + '</span></div>' +
+        (tags ? '<div class="fr-tag">' + tags + '</div>' : '') +
+        '</div>';
+    }).join('');
+    var fSwitch = [7, 14, 30].map(function (n) {
+      return '<button class="ptab' + (n === fdays ? ' on' : '') + '" data-act="foot-days" data-n="' + n + '">近 ' + n + ' 天</button>';
+    }).join('');
+    html += WB.card({
+      title: '🗺️ 每日学习足迹',
+      sub: '每天一行：亮起来的图标 = 那天在这个板块有打卡，灰色 = 没学；点一行可跳到那天',
+      right: '<span class="muted">' + fdays + ' 天</span>',
+      body: '<div class="plan-tabs" style="padding:0 0 10px">' + fSwitch + '</div>' +
+        '<div class="foot">' + fRows + '</div>' +
+        '<div class="glegend">' +
+          '<span><i style="background:#fff;border-style:dashed"></i>这天没学</span>' +
+          '<span><i style="background:linear-gradient(145deg,#ffd9e4,#ffc5d6);border-color:#f9b9cc"></i>有打卡</span>' +
+          '<span>📖 = 当天拿下的章节　🎤 = 当天攻下的导游词</span></div>'
+    });
+
+    /* ---------- 🔍 缺口扫描：空白日 / 低效日 / 断更板块 ---------- */
+    var gap = WB.gapScan(date, 30);
+    var worst = gap.miss.filter(function (m) { return m.gap > 0; })[0];
+    var sumTxt = '近 30 天：空白 <b>' + gap.blank.length + '</b> 天、低效 <b>' + gap.low.length + '</b> 天；' +
+      (worst ? '最容易落下的是「<b>' + worst.name + '</b>」，已断 <b>' + worst.gap + '</b> 天'
+        : '所有板块今天都没落下 🎉');
+    var blankHTML = gap.blank.length
+      ? '<div class="gap-list">' + gap.blank.slice().reverse().map(function (d) {
+        return '<span class="gpill gray">' + D.md(d) + ' ' + D.weekday(d) + '</span>';
+      }).join('') + '</div>'
+      : '<div class="empty">太棒了，近 30 天一天都没空 🎉</div>';
+    var lowHTML = gap.low.length
+      ? '<div class="gap-list">' + gap.low.slice().reverse().map(function (x) {
+        return '<span class="gpill amber">' + D.md(x.date) + ' ' + D.weekday(x.date) + ' · ' + x.done + '/' + x.total + '</span>';
+      }).join('') + '</div>'
+      : '<div class="empty">没有低效日，稳稳的 ✨</div>';
+    var missHTML = '<div class="gtl">' + gap.miss.map(function (m) {
+      var t = m.gap < 0 ? '还没有记录' : (m.gap === 0 ? '今天已打卡 ✅' : (m.gap === 1 ? '断 1 天' : '断 ' + m.gap + ' 天'));
+      var cls = m.gap === 0 ? 'green' : (m.gap < 0 ? 'gray' : (m.gap >= 3 ? 'red' : 'amber'));
+      return '<div class="gtl-row"><span class="gtl-n">' + (m.icon || '🎀') + ' ' + m.name + '</span>' +
+        '<span class="gpill ' + cls + '">' + t + '</span>' +
+        '<span class="muted">' + (m.last ? '上次 ' + D.md(m.last) : '—') + '</span></div>';
+    }).join('') + '</div>';
+    html += WB.card({
+      title: '🔍 缺口扫描 · 哪天没学 / 什么最容易断',
+      sub: sumTxt,
+      body: '<div class="gap-sec"><div class="gap-h">😶 空白日 · 近 30 天完全没打卡（' + gap.blank.length + ' 天）</div>' + blankHTML + '</div>' +
+        '<div class="gap-sec"><div class="gap-h">🫧 低效日 · 完成率不足 30%（' + gap.low.length + ' 天）</div>' + lowHTML + '</div>' +
+        '<div class="gap-sec"><div class="gap-h">⏳ 各板块断更天数 · 上次打卡距今</div>' + missHTML + '</div>'
+    });
+
+    /* ---------- 📖 备考轨迹：哪天学了哪一章 ---------- */
+    var trail = WB.guideTrail(14);
+    var trHTML = trail.length
+      ? '<div class="trail">' + trail.map(function (t) {
+        return '<div class="trail-row"><span class="tr-d">' + (t.date ? D.md(t.date) : '—') + '</span>' +
+          '<span class="tr-t">' + (t.kind === 'ch' ? '📖 ' : '🎤 ') + WB.esc(t.title) + '</span>' +
+          '<span class="gpill' + (t.st >= 2 ? ' green' : '') + '">' + (t.st >= 2 ? '已巩固' : (t.kind === 'ch' ? '已学' : '熟悉中')) + '</span></div>';
+      }).join('') + '</div>'
+      : '<div class="empty">还没有记录，去「导游学习」点章节格子就会自动记上 🎀</div>';
+    html += WB.card({
+      title: '📖 备考轨迹 · 最近拿下的章节 / 导游词',
+      sub: '按完成日期倒序：哪天学了哪一章，一眼回看',
+      body: trHTML
+    });
+
     html += WB.card({
       title: '📊 本周各模块学习记录统计', sub: '横向柱状 · 每个模块本周打卡了几次',
       body: '<div class="chart-box tall"><canvas id="chartWeekSec"></canvas></div>' +
@@ -3153,6 +4146,57 @@ WB.BODY_FIELDS = [
             return '<span class="tag-pill">' + w.name + ' ' + w.count + ' 次</span>';
           }).join('') +
         '</div>'
+    });
+
+    /* ---------- ⚖️ 早晚体重 & 夜间代谢 ---------- */
+    var wd = WB.weightDigest(date, 7);
+    var nm = wd.night;
+    function wnum(v, unit) { return v == null ? '<span class="muted">—</span>' : v + '<small>' + (unit || 'kg') + '</small>'; }
+    var wbCells =
+      '<div class="wb-grid">' +
+        '<div class="wb-cell"><div class="wb-k">今晨体重</div><div class="wb-v">' + wnum(wd.am) + '</div><div class="wb-x">起床后、空腹</div></div>' +
+        '<div class="wb-cell"><div class="wb-k">今晚体重</div><div class="wb-v">' + wnum(wd.pm) + '</div><div class="wb-x">睡前称</div></div>' +
+        '<div class="wb-cell"><div class="wb-k">夜间代谢（今晨−昨晚）</div><div class="wb-v" style="color:' + nm.level.color + '">' +
+          (nm.drop == null ? '<span class="muted">—</span>' : (nm.drop >= 0 ? '−' + nm.drop : '+' + Math.abs(nm.drop)) + '<small>kg</small>') +
+        '</div><div class="wb-x">' + nm.level.label + '</div></div>' +
+        '<div class="wb-cell"><div class="wb-k">白天波动（晚−早）</div><div class="wb-v" style="color:' + wd.level.color + '">' +
+          (wd.diff == null ? '<span class="muted">—</span>' : (wd.diff >= 0 ? '+' : '') + wd.diff + '<small>kg</small>') +
+        '</div><div class="wb-x">' + wd.level.label + '</div></div>' +
+      '</div>';
+    var wbTip = '<div class="adv-row ' + ((nm.drop == null || nm.drop < 0.2 || nm.drop >= 1.0) ? 'warn' : 'ok') + '">' +
+      '<span class="adv-ico">💬</span><span class="adv-t">' +
+      (nm.drop == null
+        ? '夜间代谢 = <b>今晨体重 − 前一天晚体重</b>，一夜掉 0.2~1.0kg 说明代谢在正常工作。今天先去「强身健体」把早晚体重填上，明天这里就有数啦。'
+        : '<b>' + nm.level.label + '</b>：' + nm.level.tip + '（公式：今晨 ' + nm.am + 'kg − 昨晚 ' + nm.pmPrev + 'kg = ' +
+          (nm.drop >= 0 ? '−' + nm.drop + 'kg' : '+' + Math.abs(nm.drop) + 'kg') + '）') +
+      '</span></div>';
+    var wbRows = wd.rows.length
+      ? '<div class="gtl">' + wd.rows.slice().reverse().map(function (r) {
+        return '<div class="gtl-row"><span class="gtl-n">' + D.md(r.date) + '</span>' +
+          '<span class="gtl-d">今晨 ' + r.am + 'kg − 昨晚 ' + r.pmPrev + 'kg</span>' +
+          '<span class="gpill' + (r.drop >= 0.2 && r.drop < 1.0 ? ' green' : ' amber') + '">' +
+          (r.drop >= 0 ? '掉 ' + r.drop + 'kg' : '回升 ' + Math.abs(r.drop) + 'kg') + '</span></div>';
+      }).join('') + '</div>'
+      : '';
+    html += WB.card({
+      title: '⚖️ 早晚体重 & 夜间代谢',
+      sub: '近 7 天平均夜间掉秤 ' + (wd.avgDrop == null ? '—' : wd.avgDrop + 'kg') + '（' + wd.days + ' 天有记录）' +
+        (wd.trend != null ? '　·　晨重较上周 ' + (wd.trend >= 0 ? '+' : '') + wd.trend + 'kg' : ''),
+      right: '<button class="btn sm ghost" data-act="goto" data-sec="fitness">去记录 →</button>',
+      body: wbCells + wbTip + wbRows +
+        (wd.bmr ? '<div class="hint">按你的身高/年龄估算：基础代谢约 <b>' + wd.bmr + '</b> kcal，日常消耗约 <b>' + wd.tdee + '</b> kcal。' +
+          '夜间掉秤主要来自呼吸、排汗与水分蒸发，配合晨重趋势看更准。</div>'
+          : '<div class="hint">想看基础代谢估算，去「强身健体」填一下身高 / 年龄 / 性别 / 活动量。</div>')
+    });
+
+    /* ---------- 💬 小自律的建议 & 鼓励 ---------- */
+    var advice = WB.reviewAdvice(date);
+    html += WB.card({
+      title: '💬 小自律的建议 & 鼓励', sub: '全部由今天的真实数据自动生成，写完复盘前先瞄一眼',
+      body: '<div class="adv">' + advice.map(function (a) {
+        return '<div class="adv-row ' + a.tone + '"><span class="adv-ico">' + a.icon + '</span>' +
+          '<span class="adv-t">' + a.text + '</span></div>';
+      }).join('') + '</div>'
     });
 
     html += '<div class="grid g2">';
@@ -3206,7 +4250,7 @@ WB.BODY_FIELDS = [
     });
     var pl = WB.planStats ? WB.planStats(date) : null;
     var txt = '当日任务完成 ' + p.done + '/' + p.total + '（' + p.pct + '%）。各板块：' + parts.join('、') + '。';
-    if (pl) txt += '今日清单随机计划 ' + pl.done + '/' + pl.total + '（' + pl.pct + '%）。';
+    if (pl) txt += '今日打卡 ' + pl.doneAll + '/' + pl.listTotal + ' 项，达标线 ' + pl.total + ' 项（' + pl.pct + '%）。';
     var coins = WB.coinEarnedOn ? WB.coinEarnedOn(date) : 0;
     if (coins) txt += '今日获得金币 ' + coins + ' 枚。';
     return txt;
@@ -3363,24 +4407,27 @@ WB.BODY_FIELDS = [
       '</section>';
   };
 
-  /* 底部奖励条：全勤可领 / 已到账 / 还差几条（局部刷新时也会复用） */
+  /* 底部奖励条：达标可领 / 已到账 / 还差几条（局部刷新时也会复用） */
   WB.planGiftHTML = function (date) {
     var st = WB.planStats(date);
     var rule = (WB.COIN_RULES || []).filter(function (r) { return r.id === 'today-all'; })[0] || { amount: 5 };
     var got = WB.coinHasRule(date, 'today-all');
     if (st.allDone && !got) {
-      return '<div class="gift-row"><span>🎉 全部完成啦！可以领取金币奖励</span>' +
+      return '<div class="gift-row"><span>🎉 今日已打卡 <b>' + st.doneAll + '</b> 项，达标啦！可以领金币</span>' +
         '<button class="btn primary" data-act="claim-plan-coin">🎁 领取 +' + rule.amount + ' 金币</button></div>';
     }
-    if (got) return '<div class="gift-row got"><span>✅ 今日全勤金币已到账 ' + rule.amount + ' 枚</span></div>';
-    return '<div class="gift-row dim"><span>还差 <b>' + (st.total - st.done) + '</b> 条就能领 ' + rule.amount + ' 枚金币啦</span></div>';
+    if (got) {
+      var extraTxt = st.doneAll > st.total ? '（已超额完成 ' + st.doneAll + ' 项，超棒！）' : '';
+      return '<div class="gift-row got"><span>✅ 今日达标金币已到账 ' + rule.amount + ' 枚 ' + extraTxt + '</span></div>';
+    }
+    return '<div class="gift-row dim"><span>今日已打卡 <b>' + st.doneAll + '</b> / ' + st.total + '，再完成 <b>' +
+      Math.max(0, st.total - st.doneAll) + '</b> 项就能领 ' + rule.amount + ' 枚金币啦</span></div>';
   };
 
-  /* ---------- 今日任务：从你自己设置的任务里抽 6 条 ---------- */
+  /* ---------- 今日任务：展示当天全部打卡事项，打满 6 项达标 ---------- */
   function todayHTML(date) {
-    var ps = WB.dailyPlans(date);
+    var ps = WB.planItems(date);
     var st = WB.planStats(date);
-    var poolN = WB.planPool(date).length;
     if (!ps.length) {
       return '<div class="empty">还没有可用于今日清单的任务。<br/>' +
         '去「强身健体 / 英语学习 / 导游学习 / 每日阅读」等板块新增任务，或在下方添加今日临时计划，它们会自动出现在这里。</div>' +
@@ -3421,19 +4468,38 @@ WB.BODY_FIELDS = [
     /* 自定义补充条目（当天有效） */
     var extra = WB.tasksOf('today', date);
     var gift = WB.planGiftHTML(date);
-    var canRoll = poolN > 6;
+    var over = st.doneAll > st.total;
+
+    /* 今日备考提醒：导游章节 + 导游词（可直接在这里标已学，或跳到导游板块） */
+    var gplan = WB.guidePlan ? WB.guidePlan(date) : null;
+    var gline = '';
+    if (gplan && (gplan.phase === 'learn' || gplan.phase === 'review')) {
+      var gtxt = '';
+      if (gplan.phase === 'learn' && gplan.chapter) {
+        gtxt = '<b>第 ' + gplan.dayIndex + '/' + gplan.total + ' 章</b>　' + gplan.chapter.short +
+          ' 第 ' + gplan.chapter.no + ' 章《' + WB.esc(gplan.chapter.title) + '》';
+      } else {
+        gtxt = '<b>总复习第 ' + gplan.reviewDay + ' 天</b>　' + (gplan.reviewBook ? gplan.reviewBook.name : '四科复盘');
+      }
+      gline = '<div class="grow" style="margin:12px 0 0"><span class="gpill amber">🧭 今日备考</span>' +
+        '<span>' + gtxt + (gplan.speech ? '　🎤 ' + WB.esc(WB.guideSpeechName(gplan.speech.id)) : '') + '</span>' +
+        (gplan.chapter ? '<button class="btn sm primary" data-act="g-chapter" data-key="' + gplan.chapter.key + '">✅ 标记已学</button>' : '') +
+        '<button class="btn sm ghost" data-act="goto" data-sec="guide">详情 →</button></div>';
+    }
+
     return '<div class="row-between plan-head">' +
-        '<div><b>' + D.md(date) + ' 今日清单</b>　<span class="muted">从你的任务设置中抽取 · 与各板块打卡同步</span></div>' +
-        (canRoll ? '<button class="btn sm" data-act="reroll-plans">🎲 换一批</button>' : '') +
+        '<div><b>' + D.md(date) + ' 今日全部打卡</b>　<span class="muted">共 ' + st.listTotal + ' 项 · 满 ' + st.total + ' 项达标</span></div>' +
+        '<span class="goal-chip' + (st.allDone ? ' on' : '') + '">🎯 今日目标 ' + st.total + ' 项</span>' +
       '</div>' +
-      '<div class="bigbar"><i style="width:' + st.pct + '%"></i><span>' + st.done + ' / ' + st.total + '　' + st.pct + '%</span></div>' +
-      list + gift +
+      '<div class="bigbar"><i style="width:' + st.pct + '%"></i><span>' + st.doneAll + ' / ' + st.total + '　' + st.pct + '%' +
+        (over ? '（超额 +' + (st.doneAll - st.total) + '）' : '') + '</span></div>' +
+      list + gift + gline +
       (extra.length ? '<hr class="sep"/><div class="tasks">' +
         extra.map(function (t) { return WB.taskRow(t, date, {}); }).join('') + '</div>' : '') +
       WB.addTaskForm('today', date, { defRepeat: 'once' }) +
-      '<div class="hint">清单来自「强身健体 / 英语学习 / 导游学习 / 每日阅读」等板块的任务设置，共 ' + poolN + ' 条' +
-      (canRoll ? '，这里展示其中的 ' + st.total + ' 条（必做项优先），点「换一批」切换组合' : '（不足 6 条，已全部展示）') +
-      '。在这里勾选或填数值，等于在对应板块打卡，数据完全同步、永久存档。</div>';
+      '<div class="hint">这里列出的是今天<b>全部</b>打卡事项（共 ' + st.listTotal + ' 项，来自强身健体 / 英语 / 导游 / 阅读等板块的任务设置）。' +
+      '打满 <b>' + st.total + '</b> 项就算今日达标、可领金币，多做的每一项都算你的超额战绩。' +
+      '在这里勾选或填数值，等于在对应板块打卡，数据完全同步、永久存档。</div>';
   }
 
   /* ---------- 本周计划 ---------- */
@@ -4244,7 +5310,8 @@ WB.BODY_FIELDS = [
     var d = D.parse(today);
     var dateLine = d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日';
     var weekLine = D.weekday(today);
-    var greet = WB.state.settings.greeting || '嗨，老板大人';
+    var greet = WB.state.settings.greeting || WB.DEFAULT_GREETING || '嗨，财财';
+    var ai = WB.AI_NAME || '小自律';
     var bal = WB.coinBalance ? WB.coinBalance() : 0;
     var seq = WB.streakAny ? WB.streakAny(today) : 0;
     return '' +
@@ -4257,6 +5324,7 @@ WB.BODY_FIELDS = [
           '<button class="sp-edit" id="spEdit" title="自定义问候语">✏️</button>' +
         '</div>' +
         '<div class="sp-praise" id="spPraise">' + WB.esc(WB.randomPraise()) + '</div>' +
+        '<div class="sp-by">我是你的 ' + WB.esc(ai) + '，今天也一起加油 🎀</div>' +
         '<div class="sp-mini">' +
           '<span>🪙 金币 ' + bal + '</span>' +
           '<span>🔥 连续打卡 ' + seq + ' 天</span>' +
@@ -4288,7 +5356,7 @@ WB.BODY_FIELDS = [
     };
     wrap.querySelector('#spEdit').onclick = function () {
       WB.form('自定义问候语', [
-        { k: 'g', t: '启动页问候语', ph: '如：嗨，老板大人', value: WB.state.settings.greeting || '' }
+        { k: 'g', t: '启动页问候语', ph: '如：' + (WB.DEFAULT_GREETING || '嗨，财财'), value: WB.state.settings.greeting || '' }
       ], '保存').then(function (r) {
         if (!r || !r.g) return;
         WB.state.settings.greeting = r.g;
@@ -4365,7 +5433,7 @@ WB.BODY_FIELDS = [
   /* 今日清单的局部刷新：勾选 / 填数值后更新条目样式、进度条、奖励条、金币与侧栏 */
   function patchPlanUI() {
     var map = {};
-    WB.dailyPlans(cur.date).forEach(function (p) { map[p.id] = p; });
+    WB.planItems(cur.date).forEach(function (p) { map[p.id] = p; });
     Array.prototype.forEach.call(view.querySelectorAll('.plan-item[data-pid]'), function (el) {
       var p = map[el.getAttribute('data-pid')];
       if (!p) return;
@@ -4378,8 +5446,12 @@ WB.BODY_FIELDS = [
     var bb = view.querySelector('.bigbar');
     if (bb) {
       var bi = bb.querySelector('i'); if (bi) bi.style.width = st.pct + '%';
-      var bs = bb.querySelector('span'); if (bs) bs.textContent = st.done + ' / ' + st.total + '　' + st.pct + '%';
+      var bs = bb.querySelector('span');
+      if (bs) bs.textContent = st.doneAll + ' / ' + st.total + '　' + st.pct + '%' +
+        (st.doneAll > st.total ? '（超额 +' + (st.doneAll - st.total) + '）' : '');
     }
+    var chip = view.querySelector('.goal-chip');
+    if (chip) chip.classList.toggle('on', st.allDone);
 
     var gr = view.querySelector('.gift-row');
     if (gr && WB.planGiftHTML) gr.outerHTML = WB.planGiftHTML(cur.date);
@@ -4418,6 +5490,14 @@ WB.BODY_FIELDS = [
   }
   WB.renderAll = render;
   WB.goto = function (id) { cur.section = id; render(); };
+
+  /* 重绘但保留当前滚动位置：点章节格子 / 导游词时用，避免页面跳回顶部 */
+  function renderKeep() {
+    var sc = view.scrollTop;
+    render();
+    view.scrollTop = sc;
+  }
+  WB.renderKeep = renderKeep;
 
   /* ---------------- 顶部操作 ---------------- */
   datePicker.addEventListener('change', function () {
@@ -4542,6 +5622,72 @@ WB.BODY_FIELDS = [
 
     if (act === 'goto') { WB.goto(el.getAttribute('data-sec')); return; }
 
+    /* ---- 🧭 导游备考：四科章节闯关 & 面试导游词 ---- */
+    if (act === 'g-chapter') {
+      var gk = el.getAttribute('data-key');
+      var gst2 = WB.guideChapterCycle(gk);
+      WB.toast('本章：' + ((WB.GSTATE || ['未学', '已学', '已巩固'])[gst2] || ''), 'ok');
+      renderKeep(); return;
+    }
+    if (act === 'g-speech') {
+      var sst2 = WB.guideSpeechCycle(id);
+      WB.toast('这篇：' + ((WB.SSTATE || ['未开始', '熟悉中', '可脱稿'])[sst2] || ''), 'ok');
+      renderKeep(); return;
+    }
+    if (act === 'g-start') {
+      WB.form('计划开始日', [
+        { k: 'd', t: '从哪天开始「一天一章」？', type: 'date', value: WB.guideStudyState().startDate }
+      ], '保存').then(function (r) {
+        if (!r || !r.d) return;
+        WB.guideSetStart(r.d);
+        WB.toast('开始日已设为 ' + r.d, 'ok'); render();
+      });
+      return;
+    }
+    if (act === 'g-reschedule') {
+      WB.confirm('一键重排', '把「还没学」的章节从今天起重新排一遍，已学的保持不动。\n适合落下几天之后追赶进度。').then(function (ok) {
+        if (!ok) return;
+        var nd = WB.guideReschedule(cur.date);
+        WB.toast('已重排：未学章节从今天顺延（开始日 ' + nd + '）', 'ok'); render();
+      });
+      return;
+    }
+    if (act === 'g-book-title') {
+      var bk = (WB.GUIDE_BOOKS || []).filter(function (x) { return x.id === id; })[0];
+      if (!bk) return;
+      var gt = WB.guideStudyState().titles;
+      WB.form('修改章名 · ' + bk.name, (bk.titles || []).map(function (t, i) {
+        var k = bk.id + '-' + (i + 1);
+        return { k: k, t: '第 ' + (i + 1) + ' 章', ph: t, value: gt[k] || '' };
+      }), '保存').then(function (r) {
+        if (!r) return;
+        Object.keys(r).forEach(function (k) { if (r[k]) gt[k] = r[k]; else delete gt[k]; });
+        WB.save(); WB.toast('章名已更新', 'ok'); render();
+      });
+      return;
+    }
+    /* ---- 🗺️ 复盘：学习足迹 ---- */
+    if (act === 'foot-days') {
+      WB.footDays = parseInt(el.getAttribute('data-n'), 10) || 14;
+      renderKeep(); return;
+    }
+    if (act === 'foot-go') {
+      var fd = el.getAttribute('data-date');
+      if (fd) { cur.date = fd; render(); }
+      return;
+    }
+    if (act === 'g-speech-title') {
+      var gt2 = WB.guideStudyState().titles;
+      WB.form('修改导游词篇目 · 河南 12 篇', (WB.GUIDE_SPEECHES || []).map(function (x, i) {
+        return { k: x.id, t: '第 ' + (i + 1) + ' 篇', ph: x.name + '（' + x.city + '）', value: gt2[x.id] || '' };
+      }), '保存').then(function (r) {
+        if (!r) return;
+        Object.keys(r).forEach(function (k) { if (r[k]) gt2[k] = r[k]; else delete gt2[k]; });
+        WB.save(); WB.toast('篇目已更新', 'ok'); render();
+      });
+      return;
+    }
+
     /* ---- 🧺 今日清单三分页 ---- */
     if (act === 'plan-tab') { WB.planTab = el.getAttribute('data-tab'); render(); return; }
 
@@ -4555,13 +5701,20 @@ WB.BODY_FIELDS = [
       return;
     }
 
-    if (act === 'reroll-plans') {
-      WB.rerollPlans(cur.date); WB.toast('已换一批，新的一天六条 ✨'); render(); return;
+    /* ---- 🔊 双语好句语音朗读 / 跟读 ---- */
+    if (act === 'speak') {
+      WB.speak(el.getAttribute('data-text'), {
+        lang: el.getAttribute('data-lang') || 'en-US',
+        rate: parseFloat(el.getAttribute('data-rate')) || 1
+      });
+      WB.toast('播放中…跟着念 3 遍效果最好 🔊');
+      return;
     }
+    if (act === 'stop-speak') { WB.stopSpeak(); WB.toast('已停止'); return; }
 
     if (act === 'claim-plan-coin') {
       var gotN = WB.grantCoin('today-all', cur.date);
-      if (gotN > 0) WB.toast('🎉 全勤奖励 +' + gotN + ' 金币已到账', 'ok');
+      if (gotN > 0) WB.toast('🎉 今日达标奖励 +' + gotN + ' 金币已到账', 'ok');
       else WB.toast('今天已领过或金币已达上限啦', 'err');
       render(); return;
     }
@@ -4844,6 +5997,13 @@ WB.BODY_FIELDS = [
       /* 今日清单里填数值：只做局部更新，避免整页重绘打断输入 */
       var pitem = el.closest('.plan-item');
       if (pitem) { patchPlanUI(); return; }
+      /* 体重输入框：重绘但保留滚动位置，方便连着填早晚两次 */
+      if (el.closest('.w-inputs')) {
+        var sc = view.scrollTop;
+        render();
+        view.scrollTop = sc;
+        return;
+      }
       render(); return;
     }
     if (act === 'log-note') { WB.setLog(cur.date, el.getAttribute('data-id'), { note: el.value }); return; }
@@ -4875,6 +6035,18 @@ WB.BODY_FIELDS = [
     if (!el) return;
     WB.setDraft(el.getAttribute('data-scope'), el.getAttribute('data-as'), el.value);
   });
+
+  /* ---------------- 称呼设置：改 data.js 的 WB.USER_NAME / WB.AI_NAME 即可 ---------------- */
+  (function applyNames() {
+    var who = WB.USER_NAME || '';
+    var ai = WB.AI_NAME || '小自律';
+    var sub = document.querySelector('.brand-sub');
+    if (sub && who) sub.textContent = who + '专属 · 永久存档';
+    var tip = document.querySelector('.side-tip');
+    if (tip) tip.innerHTML = '数据保存在本机浏览器，永久留存<br />你的 ' + ai + ' 一直都在，建议定期「导出备份」';
+    var t = document.title;
+    if (who && t.indexOf(who) < 0) document.title = t + ' · ' + who;
+  })();
 
   /* ---------------- 启动 ---------------- */
   cur.section = WB.state.meta.lastSection || 'today';
